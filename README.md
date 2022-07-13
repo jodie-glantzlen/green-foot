@@ -31,11 +31,28 @@ This repo includes:
 
 # MVP
 
-* Create a Database  - Holds all the challenges that a user can do.
-* Display all the challenges on a home page
-* Allow users to ADD a challenge to their personal page
-* Allow users to DELETE a challenge
-* Allow user to “complete” this will add into our points system
-* Points and Naming System. Showing the user their progress.
+*Create a Database  - Holds all the challenges that a user can choose from.
+
+*All challenges will be displayed on a Home page.
+
+*As a user I want to select a challenge from Home and add it to ‘My Challenges’ page.
+
+*As a user I want to “DELETE’ a challenge from ‘My Challenges’ page.
+
+*As a user I want to “Complete” a challenge this will add into the points system
+
+*As a user I want to see my total Points and current Rank displayed on “My Challenges” page
+
+*Styling and the look of this app is important to add to the Gamified feeling.
+
+*Deployment of the app to Heroku
+
+
+
+Stretch
+*Having a progress page to show distance to the next rank.
+*Graph page to show history and progress.
+*Ways to gamify it more - more illustrations and levels.
+*Authentication - using Auth0
 
 
