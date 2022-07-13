@@ -27,3 +27,15 @@ This repo includes:
 * configuration for Jest and testing library
 * configuration for server-side debugging in VS Code
 * a single client-side test (`client/components/App.test.js`)
+
+
+# MVP
+
+Create a Database  - Holds all the challenges that a user can do.
+Display all the challenges on a home page
+Allow users to ADD a challenge to their personal page
+Allow users to DELETE a challenge
+Allow user to “complete” this will add into our points system
+Points and Naming System. Showing the user their progress.
+
+
