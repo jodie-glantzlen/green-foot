@@ -31,11 +31,11 @@ This repo includes:
 
 # MVP
 
-Create a Database  - Holds all the challenges that a user can do.
-Display all the challenges on a home page
-Allow users to ADD a challenge to their personal page
-Allow users to DELETE a challenge
-Allow user to “complete” this will add into our points system
-Points and Naming System. Showing the user their progress.
+* Create a Database  - Holds all the challenges that a user can do.
+* Display all the challenges on a home page
+* Allow users to ADD a challenge to their personal page
+* Allow users to DELETE a challenge
+* Allow user to “complete” this will add into our points system
+* Points and Naming System. Showing the user their progress.
 
 
