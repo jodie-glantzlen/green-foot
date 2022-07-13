@@ -1,4 +1,4 @@
-# Fullstack boilerplate
+# Green Foot
 
 ## Getting Started
 
