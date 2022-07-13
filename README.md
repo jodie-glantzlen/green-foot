@@ -49,7 +49,7 @@ This repo includes:
 
 
 
-Stretch
+## Stretch
 * Having a progress page to show distance to the next rank.
 * Graph page to show history and progress.
 * Ways to gamify it more - more illustrations and levels.
