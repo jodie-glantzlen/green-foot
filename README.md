@@ -55,4 +55,6 @@ This repo includes:
 * Ways to gamify it more - more illustrations and levels.
 * Authentication - using Auth0
 
+# Wireframes
 
+<img width="867" alt="Screen Shot 2022-07-14 at 11 11 59 AM" src="https://user-images.githubusercontent.com/103092915/178852439-d95db84f-a5f2-4cc2-a034-0dc3d1efa6b6.png">
