@@ -1,4 +1,5 @@
 const express = require('express')
+// const { deleteMyChallenge } = require('../../client/apis/myChallenges')
 
 const db = require('../db/mychallenges')
 
@@ -21,4 +22,17 @@ router.post('/mychallenges', (req, res) => {
     res.json(newChallenge)
   })
 })
+
+router.delete('/mychallenges/:id', (req,res) => {
+  const id = req.params.id
+
+  
+  db.deleteMyChallenge(id)
+  .then(() => {
+    res.json('delete :(')
+  })
+  .catch((err) => res.status(500).json({msg: err.message}))
+})
+
+
 module.exports = router
