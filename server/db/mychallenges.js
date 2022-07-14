@@ -11,6 +11,13 @@ function insertMyChallenge (id, db= connection) {
   .insert(id)
 }
 
+function updateMyChallenge (id, completed, db = connection) {
+  return db('my_challenges')
+  .where('id', id)
+  .update(completed)  // { completed: true }
+}
+
+ 
 function deleteMyChallenge (id, db=connection) {
   return db('my_challenges').where('id', id).del()
 }
@@ -18,5 +25,6 @@ function deleteMyChallenge (id, db=connection) {
 module.exports = {
   selectMyChallenges,
   insertMyChallenge,
-  deleteMyChallenge
+  deleteMyChallenge,
+  updateMyChallenge
 }

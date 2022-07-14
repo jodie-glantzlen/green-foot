@@ -13,6 +13,11 @@ export function postMyChallenge(selectedChallengeId) {
   .then(res => res.body)
 }
 
+export function patchMyChallenge(selectedChallengeId) {
+  return request.patch(rootUrl + '/mychallenges')
+  .send(selectedChallengeId)
+  .then(res => res.body)
+}
 export function deleteMyChallenge(selectedChallengeId){
   return request.delete(rootUrl + '/mychallenges/' + selectedChallengeId)
   .then(()=> selectedChallengeId)

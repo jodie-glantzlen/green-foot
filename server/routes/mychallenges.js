@@ -23,6 +23,13 @@ router.post('/mychallenges', (req, res) => {
   })
 })
 
+router.patch('/mychallenges', (req, res) => {
+  const id = req.body.id
+  const completed = req.body
+
+  db.updateMyChallenge(id, completed)
+  .then((update) => res.json(update))
+})
 router.delete('/mychallenges/:id', (req,res) => {
   const id = req.params.id
 
