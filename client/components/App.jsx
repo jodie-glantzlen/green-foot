@@ -1,5 +1,6 @@
 import React from 'react'
 import MyChallenges from './MyChallenges'
+import Home from './Home'
 import { Routes, Route } from 'react-router-dom'
 
 function App () {
@@ -9,7 +10,7 @@ function App () {
 {/* <Nav /> */}
 
 <Routes>
-  {/* <Route path='/' element={<Home />} /> */}
+  <Route path='/' element={<Home />} />
   <Route path='/mychallenges' element={<MyChallenges />} />
 
 </Routes>
