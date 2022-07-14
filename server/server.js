@@ -1,13 +1,16 @@
 const express = require('express')
 const path = require('path')
 
-const challengeRoutes = require('./routes/mychallenges')
+const myChallengeRoutes = require('./routes/mychallenges')
+const challengeRoutes = require('./routes/challenges')
 
 const server = express()
 
 server.use(express.json())
-server.use(express.static(path.join(__dirname, 'public')))
+server.use(express.static(path.join(__dirname, 'public')));
 
+
+server.use('/api/v1/challenges', myChallengeRoutes)
 server.use('/api/v1/challenges', challengeRoutes)
 
 server.get('*', (req, res) => {
