@@ -13,4 +13,12 @@ router.get('/mychallenges', (req, res) => {
     })
 })
 
+router.post('/mychallenges', (req, res) => {
+  const newChallenge = req.body
+  db.insertMyChallenge(newChallenge)
+  .then((idArr) => {
+    newChallenge.id = idArr[0]
+    res.json(newChallenge)
+  })
+})
 module.exports = router
