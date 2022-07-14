@@ -21,4 +21,12 @@ router.post('/mychallenges', (req, res) => {
     res.json(newChallenge)
   })
 })
+
+router.patch('/mychallenges', (req, res) => {
+  const id = req.body.id
+  const completed = req.body
+
+  db.updateMyChallenge(id, completed)
+  .then((update) => res.json(update))
+})
 module.exports = router

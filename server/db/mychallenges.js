@@ -11,7 +11,13 @@ function insertMyChallenge (id, db= connection) {
   .insert(id)
 }
 
+function updateMyChallenge (id, completed, db = connection) {
+  return db('my_challenges')
+  .where('id', id)
+  .update(completed)  // { completed: true }
+}
 module.exports = {
   selectMyChallenges,
-  insertMyChallenge
+  insertMyChallenge,
+  updateMyChallenge
 }

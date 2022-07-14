@@ -12,3 +12,9 @@ export function postMyChallenge(selectedChallengeId) {
   .send(selectedChallengeId)
   .then(res => res.body)
 }
+
+export function patchMyChallenge(selectedChallengeId) {
+  return request.post(rootUrl + '/mychallenges')
+  .send(selectedChallengeId)
+  .then(res => res.body)
+}
