@@ -1,9 +1,11 @@
 const connection = require('./connection')
 
-function getmyChallenges (db = connection) {
-  return db('my_challenges').select()
+function selectMyChallenges (db = connection) {
+  return db('my_challenges')
+  .select()
+  .join('challenges', 'my_challenges.challenge_id', 'challenges.id')
 }
 
 module.exports = {
-  getmyChallenges
+  selectMyChallenges
 }
