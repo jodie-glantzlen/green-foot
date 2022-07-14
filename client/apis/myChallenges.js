@@ -14,7 +14,7 @@ export function postMyChallenge(selectedChallengeId) {
 }
 
 export function patchMyChallenge(selectedChallengeId) {
-  return request.post(rootUrl + '/mychallenges')
+  return request.patch(rootUrl + '/mychallenges')
   .send(selectedChallengeId)
   .then(res => res.body)
 }
