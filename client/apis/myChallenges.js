@@ -18,3 +18,7 @@ export function patchMyChallenge(selectedChallengeId) {
   .send(selectedChallengeId)
   .then(res => res.body)
 }
+export function deleteMyChallenge(selectedChallengeId){
+  return request.delete(rootUrl + '/mychallenges/' + selectedChallengeId)
+  .then(()=> selectedChallengeId)
+}

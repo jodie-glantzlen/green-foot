@@ -1,14 +1,20 @@
 import React from 'react'
 
-import { patchMyChallenge } from '../apis/myChallenges'
+import { deleteMyChallenge, patchMyChallenge, postMyChallenge } from '../apis/myChallenges'
 
-function MyChallengeCard({ data }) {
+function MyChallengeCard({ data, refresh }) {
+
+  const handleDelete = () => {
+    deleteMyChallenge(data.myChallengeId)
+    refresh()
+  }
 
 
   const Completed = (evt) => {
     evt.preventDefault()
     // console.log(data.id)
    patchMyChallenge({id: data.myChallengeId, completed: true})
+   refresh()
   }
 
 
@@ -16,10 +22,12 @@ function MyChallengeCard({ data }) {
     <>
       <h2>{data.title}</h2>
       <p>{data.description}</p>
-      <button>Delete</button>
+ 
       {!data.completed ? <button onClick={Completed}>Completed</button> :
       <button>✅</button>
       }
+      <button onClick={handleDelete}>Delete</button>
+    
       <button>{data.points} points</button>
     </>
   )
