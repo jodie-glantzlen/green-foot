@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import { fetchAllMyChallenges } from '../apis/myChallenges'
-import ChallengeCard from './ChallengeCard'
+import MyChallengeCard from './MyChallengeCard'
 
 function MyChallenges () {
 
@@ -17,7 +17,7 @@ function MyChallenges () {
     <>
     <h1 className=''>My Challenges </h1>
     <div className='challenge_container'>
-    {myChallengesArr.map(challenge => <ChallengeCard data={challenge} key={challenge.id} />)}
+    {myChallengesArr.map(challenge => <MyChallengeCard data={challenge} key={challenge.id} />)}
     </div>
     </>
   )
