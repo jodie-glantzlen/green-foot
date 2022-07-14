@@ -8,11 +8,16 @@ function Home() {
   const [challenges, setChallenges] = useState([])
 
   useEffect(() => {
-    fetchAllChallenges()
-    .then((res) => {
-      setChallenges(res)
-    })
+    refreshChallenges()
   }, [])
+
+  const refreshChallenges = () => {
+    fetchAllChallenges()
+      .then((res) => {
+        setChallenges(res)
+      })
+  }
+
 
   return (
     <>

@@ -2,7 +2,7 @@ const connection = require('./connection')
 
 function selectMyChallenges (db = connection) {
   return db('my_challenges')
-  .select()
+  .select('*', 'my_challenges.id AS myChallengeId')
   .join('challenges', 'my_challenges.challenge_id', 'challenges.id')
 }
 
@@ -11,7 +11,12 @@ function insertMyChallenge (id, db= connection) {
   .insert(id)
 }
 
+function deleteMyChallenge (id, db=connection) {
+  return db('my_challenges').where('id', id).del()
+}
+
 module.exports = {
   selectMyChallenges,
-  insertMyChallenge
+  insertMyChallenge,
+  deleteMyChallenge
 }
