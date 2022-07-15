@@ -1,37 +1,45 @@
-import React from 'react'
+import React from "react";
 
-import { deleteMyChallenge, patchMyChallenge, postMyChallenge } from '../apis/myChallenges'
+import {
+  deleteMyChallenge,
+  patchMyChallenge,
+  postMyChallenge,
+} from "../apis/myChallenges";
 
 function MyChallengeCard({ data, refresh }) {
-
   const handleDelete = () => {
-    deleteMyChallenge(data.myChallengeId)
-    refresh()
-  }
-
+    deleteMyChallenge(data.myChallengeId);
+    refresh();
+  };
 
   const Completed = (evt) => {
-    evt.preventDefault()
+    evt.preventDefault();
     // console.log(data.id)
-   patchMyChallenge({id: data.myChallengeId, completed: true})
-   refresh()
-  }
-
+    patchMyChallenge({ id: data.myChallengeId, completed: true });
+    refresh();
+  };
 
   return (
     <>
-      <h2>{data.title}</h2>
-      <p>{data.description}</p>
- 
-      {!data.completed ? <button onClick={Completed}>Completed</button> :
-      <button>✅</button>
-      }
-      <button onClick={handleDelete}>Delete</button>
-    
-      <button>{data.points} points</button>
+      <div className="challengeCard">
+     
+        <div className="media-content">
+          <p className="title is-4">{data.title}</p>
+        </div>
+        <div className="content">
+          <p>{data.description}</p>
+        </div>
+        {!data.completed ? (
+          <button className="button is-primary is-rounded" onClick={Completed}>Completed</button>
+        ) : (
+          <button>✅</button>
+        )}
+        <button class="button is-danger is-rounded" onClick={handleDelete}>Delete</button>
+
+        <button class="button is-info is-light is-rounded">{data.points} points</button>
+      </div>
     </>
-  )
+  );
 }
 
-
-export default MyChallengeCard
+export default MyChallengeCard;

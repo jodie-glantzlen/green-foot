@@ -3,14 +3,28 @@ import { Link } from "react-router-dom";
 
 function Nav() {
   return (
-    <nav>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
       <div className="branding">
-        <img src="/Greenfoot.png" alt="Green Foot logo" />
+        <img className="image is-128x128" src="/Greenfoot.png" alt="Green Foot logo" />
       </div>
-      <div className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/mychallenges">My Challenges</Link>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+      <div className="navbar-start">
+      <a className="navbar-item">
+      <Link to="/">Home</Link>
+      </a>
+
+      <a className="navbar-item">
+      <Link to="/mychallenges">My Challenges</Link>
+      </a>
+
+
       </div>
+      </div>
+
+        
+     
+
     </nav>
   )
 }
