@@ -12,10 +12,18 @@ function ChallengeCard({ data }) {
 
   return (
     <>
-      <h2>{data.title}</h2>
-      <p>{data.description}</p>
-      <button onClick={handleClick}>Accept</button>
-      <button>{data.points} points</button>
+
+<div className="challengeCard">
+
+<div className="media-content">
+          <p className="title is-4">{data.title}</p>
+        </div>
+        <div className="content">
+          <p>{data.description}</p>
+        </div>
+      <button className="button is-primary is-rounded"  onClick={handleClick}>Accept</button>
+      <button class="button is-info is-light is-rounded">{data.points} points</button>
+      </div>
     </>
   )
 }
