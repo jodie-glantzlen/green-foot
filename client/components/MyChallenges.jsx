@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import ProgressBar from '@ramonak/react-progress-bar'
 
 import { fetchAllMyChallenges } from '../apis/myChallenges'
 import MyChallengeCard from './MyChallengeCard'
@@ -16,7 +17,6 @@ const [myChallengesArr, setMyChallengesArr] = useState([])
   const refreshMyChallenges = () => {
     fetchAllMyChallenges()
       .then((results) => {
-        console.log(results)
         setMyChallengesArr(results)
       })
   }
@@ -30,6 +30,8 @@ const [myChallengesArr, setMyChallengesArr] = useState([])
   }, 0)
 
 
+
+
   return (
     <>
     <h1 className=''>My Challenges </h1>
@@ -37,8 +39,9 @@ const [myChallengesArr, setMyChallengesArr] = useState([])
     {myChallengesArr.map(challenge => <MyChallengeCard data={challenge} key={challenge.id} refresh={refreshMyChallenges} />)}
     </div>
     <div className='points-section'>
+      <h3>Green Score: {currentPoints}</h3>
+      <ProgressBar completed={currentPoints} />
 
-      <h3>Current points: {currentPoints}</h3>
     </div>
     </>
   )

@@ -38,6 +38,7 @@
     ]
   },
   "dependencies": {
+    "@ramonak/react-progress-bar": "^5.0.1",
     "@vscode/sqlite3": "^5.0.7",
     "express": "^4.17.1",
     "knex": "^1.0.2",
