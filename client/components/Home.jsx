@@ -6,11 +6,10 @@ import { fetchAllMyChallenges } from '../apis/myChallenges'
 import ChallengeCard from './ChallengeCard'
 
 function Home() {
+
   const [challenges, setChallenges] = useState([])
   const [myChallengesArr, setMyChallengesArr] = useState([])
   const [currentPointsState, setCurrentPointsState] = useState()
-
-  console.log(challenges)
 
   useEffect(() => {
     refreshChallenges()
@@ -23,7 +22,7 @@ function Home() {
       console.log('easy')
       console.log(challenges.slice(0, 4))
     } else if (currentPointsState >= 20 && currentPointsState < 60) {
-      setChallenges(challenges.slice(0, 7))
+      setChallenges(challenges.slice(0, 8))
       console.log('medium')
     } else {
       setChallenges(challenges)
