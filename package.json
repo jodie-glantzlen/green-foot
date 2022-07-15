@@ -38,6 +38,7 @@
     ]
   },
   "dependencies": {
+    "@ramonak/react-progress-bar": "^5.0.1",
     "@vscode/sqlite3": "^5.0.7",
     "bulma": "^0.9.4",
     "express": "^4.17.1",
