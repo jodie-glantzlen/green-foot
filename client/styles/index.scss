@@ -3,25 +3,31 @@
 html, 
 body {
   font-family: 'Montserrat', sans-serif;
+  padding-top: 60px;
 }
 
-
-
-nav {
+.navbar {
   display: flex;
   align-items: center;
   background-color: bisque;
+  position: fixed;
+  top: 0;
+  width: 100%;
 
   img {
-    width: 50%;
+    width: 5%;
+    height: auto;
+    mix-blend-mode: multiply;
+  }
+
+  a {
+    margin-left: 20px;
   }
 }
-
 
 .challenge_container{
 display: flex;
 flex-wrap: wrap;
-
 }
 
 .challengeCard{
@@ -34,8 +40,10 @@ padding: 60px;
   display: flex;
   background-color: yellow;
   justify-content: space-around;
-  position: sticky;
   align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 
   img {
     width: 10%;

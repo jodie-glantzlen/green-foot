@@ -42,7 +42,11 @@ function MyChallenges () {
   }
 
   return (
-    <>
+    <>     
+      <h1 className='has-text-centered'>My Challenges </h1>
+      <div className='challenge_container'>
+        {myChallengesArr.map(challenge => <MyChallengeCard data={challenge} key={challenge.id} refresh={refreshMyChallenges} />)}
+      </div>
       <div className='points-section'>
         <h3>My Score: {currentPoints}</h3>
         <h3>My Rank: {currentRank}</h3>
@@ -57,11 +61,7 @@ function MyChallenges () {
           {currentRank === 'Polar Bear Protector' && 
           <img src="/polar-bear.png" alt="Cute polar bear icon" />}
         </span>
-      </div>      
-      <h1 className='has-text-centered'>My Challenges </h1>
-      <div className='challenge_container'>
-        {myChallengesArr.map(challenge => <MyChallengeCard data={challenge} key={challenge.id} refresh={refreshMyChallenges} />)}
-      </div>
+      </div> 
     </>
   )
 }
