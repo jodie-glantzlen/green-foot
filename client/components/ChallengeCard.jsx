@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from './Modal'
 
 import { postMyChallenge } from '../apis/myChallenges'
 
+
+
+
 function ChallengeCard({ data }) {
+
+  const [none, setDisplay] = useState(false)
+  const [modal, setModal] = useState(false)
 
   const handleClick = (evt) => {
     evt.preventDefault()
@@ -10,20 +17,51 @@ function ChallengeCard({ data }) {
    postMyChallenge({challenge_id: data.id})
   }
 
+  const viewDetails = (evt) => {
+    if(none === false) {
+      setDisplay(true)
+    } if (none === true) {
+      setDisplay(false)
+    }
+  }
+
+  const viewModal = (evt) => {
+    if(modal === false) {
+      setModal(true)
+    } if (modal === true) {
+      setModal(false)
+    }
+  }
+
+
+
   return (
     <>
 
+
+
 <div className="challengeCard">
 
-<div className="media-content">
+<div>
           <p className="title is-4">{data.title}</p>
         </div>
         <div className="content">
-          <p>{data.description}</p>
+          {none && <p>{data.description}</p>}
+        
         </div>
+       
+  
+       
+      <button class="button is-info is-light is-rounded" onClick={viewModal}>Details</button>
+
       <button className="button is-primary is-rounded"  onClick={handleClick}>Accept</button>
-      <button class="button is-info is-light is-rounded">{data.points} points</button>
+      {none && <button className="button is-info is-light is-rounded">{data.points} points</button>}
       </div>
+
+
+    {modal && <Modal data = { data }/>}
+
+
     </>
   )
 }
