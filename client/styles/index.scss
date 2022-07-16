@@ -3,13 +3,24 @@
 html, 
 body {
   font-family: 'Montserrat', sans-serif;
-  padding-top: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #FCF8E8;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  font-weight: bold;
+  color: white;
 }
 
 .navbar {
   display: flex;
   align-items: center;
-  background-color: bisque;
+  background-color: #4E944F;
   position: fixed;
   top: 0;
   width: 100%;
@@ -22,6 +33,7 @@ body {
 
   a {
     margin-left: 20px;
+    color: white
   }
 }
 
@@ -31,39 +43,56 @@ flex-wrap: wrap;
 justify-content: space-around;
 }
 
-.challengeCard{
-width: 20%;
-height: 400px;
-padding: 40px;
-border: 2px solid green;
+.challenge-card, .my-challenge-card {
+  width: 250px;
+  height: 400px;
+  padding: 20px;
+  border: 2px solid green;
   border-radius: 25px;
   margin: 5px;
   display: flex;
-flex-wrap: wrap;
-justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  background-color: #F7EDDB;
+
+  img {
+    mix-blend-mode: multiply;
+  }
 }
 
-.challengeCard img {
+.challenge-card img {
   height: 70%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .points-section {
   display: flex;
-  background-color: yellow;
-  justify-content: space-around;
+  background-color: #4E944F;
+  justify-content: flex-start;
   align-items: center;
   position: fixed;
   bottom: 0;
   width: 100%;
+  color: white;
+  flex-wrap: wrap;
 
-
+  h3 {
+    margin-left: 20px;
+    font-weight: bold;
+  }
 
   img {
     width: 10%;
     margin-top: 8px;
+    margin-left: 20px;
   }
 }
-
 
 .banaa{
   position: fixed; /* Stay in place */
@@ -91,7 +120,7 @@ justify-content: center;
   position: absolute;
 }
 
-.button {
-  float: right;
-  
+.creds {
+  font-size: smaller;
+  margin-left: 40%;
 }

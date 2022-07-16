@@ -10,6 +10,7 @@ function Home() {
   const [challenges, setChallenges] = useState([])
   const [myChallengesArr, setMyChallengesArr] = useState([])
   const [currentPointsState, setCurrentPointsState] = useState()
+  const [level, setLevel] = useState('')
 
   useEffect(() => {
     refreshChallenges()
@@ -19,16 +20,14 @@ function Home() {
   useEffect(() => {
     if (currentPointsState < 20) {
       setChallenges(challenges.slice(0, 4))
-      console.log('easy')
-      console.log(challenges.slice(0, 4))
+      setLevel('Level 1')
     } else if (currentPointsState >= 20 && currentPointsState < 60) {
       setChallenges(challenges.slice(0, 8))
-      console.log('medium')
+      setLevel('Level 2')
     } else {
       setChallenges(challenges)
-      console.log('all levels')
+      setLevel('Level 3')
     }
-
   }, [currentPointsState])
 
   const refreshChallenges = () => {
@@ -52,7 +51,6 @@ function Home() {
         }, 0))
       })
   }
-
 
   return (
     <>
