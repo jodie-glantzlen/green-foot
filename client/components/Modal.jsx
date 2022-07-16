@@ -1,16 +1,10 @@
 import React from "react";
+import { viewModal } from './ChallengeCard'
 
-
-function Modal({ data }) {
+function Modal({ data , viewModal, handleClick }) {
 
   console.log(data)
 
-
-
-const close = (evt) => {
-  evt.preventDefault()
-  window.location.reload()
-}
 
   return (
     <div className="banaa">
@@ -18,10 +12,9 @@ const close = (evt) => {
       <p className="title is-4">{data.title}</p>
       
       <p>{data.description}</p>
-      
+      <button className="button is-primary is-rounded"  onClick={evt => handleClick(evt)}>Accept</button>
       </div>
-
-      <button onClick={close} className="button is-danger">Close</button>
+      <button  className="button is-danger" onClick={evt => viewModal(evt)}>Close</button>
       </div>
   )
 }

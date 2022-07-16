@@ -17,15 +17,8 @@ function ChallengeCard({ data }) {
    postMyChallenge({challenge_id: data.id})
   }
 
-  const viewDetails = (evt) => {
-    if(none === false) {
-      setDisplay(true)
-    } if (none === true) {
-      setDisplay(false)
-    }
-  }
 
-  const viewModal = (evt) => {
+ const viewModal = (evt) => {
     if(modal === false) {
       setModal(true)
     } if (modal === true) {
@@ -33,33 +26,27 @@ function ChallengeCard({ data }) {
     }
   }
 
-
-
   return (
     <>
 
-
-
 <div className="challengeCard">
 
-<div>
+        <div>
           <p className="title is-4">{data.title}</p>
         </div>
         <div className="content">
           {none && <p>{data.description}</p>}
-        
         </div>
        
-  
-       
-      <button class="button is-info is-light is-rounded" onClick={viewModal}>Details</button>
 
+    
+      <button class="button is-info is-light is-rounded" onClick={viewModal}>Details</button>
       <button className="button is-primary is-rounded"  onClick={handleClick}>Accept</button>
       {none && <button className="button is-info is-light is-rounded">{data.points} points</button>}
       </div>
 
 
-    {modal && <Modal data = { data }/>}
+    {modal && <Modal data = { data } viewModal={viewModal} handleClick={handleClick}/>}
 
 
     </>
