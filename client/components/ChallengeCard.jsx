@@ -40,7 +40,7 @@ function ChallengeCard({ data }) {
        
 
     
-      <button class="button is-info is-light is-rounded" onClick={viewModal}>Details</button>
+      <button className="button is-info is-light is-rounded" onClick={viewModal}>Details</button>
       <button className="button is-primary is-rounded"  onClick={handleClick}>Accept</button>
       {none && <button className="button is-info is-light is-rounded">{data.points} points</button>}
       </div>
