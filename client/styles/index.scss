@@ -3,14 +3,15 @@
 html, 
 body {
   font-family: 'Montserrat', sans-serif;
-  padding-top: 60px;
-  background-color: #FFFDDE;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #FCF8E8;
 }
 
 .navbar {
   display: flex;
   align-items: center;
-  background-color: bisque;
+  background-color: #4E944F;
   position: fixed;
   top: 0;
   width: 100%;
@@ -23,6 +24,7 @@ body {
 
   a {
     margin-left: 20px;
+    color: white
   }
 }
 
@@ -32,16 +34,22 @@ flex-wrap: wrap;
 justify-content: space-around;
 }
 
-.challengeCard{
-width: 20%;
-height: 400px;
-padding: 40px;
-border: 2px solid green;
+.challengeCard {
+  width: 15%;
+  height: 400px;
+  padding: 20px;
+  border: 2px solid green;
   border-radius: 25px;
   margin: 5px;
   display: flex;
-flex-wrap: wrap;
-justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  background-color: #F7EDDB;
+
+  img {
+    mix-blend-mode: multiply;
+  }
 }
 
 .challengeCard img {
@@ -50,12 +58,13 @@ justify-content: center;
 
 .points-section {
   display: flex;
-  background-color: yellow;
+  background-color: #4E944F;
   justify-content: space-around;
   align-items: center;
   position: fixed;
   bottom: 0;
   width: 100%;
+  color: white;
 
   img {
     width: 10%;
@@ -91,6 +100,6 @@ justify-content: center;
 }
 
 .button {
-  float: right;
+  //float: right;
   
 }

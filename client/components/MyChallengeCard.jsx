@@ -24,19 +24,19 @@ function MyChallengeCard({ data, refresh }) {
       <div className="challengeCard">
      
         <div className="media-content">
-          <p className="title is-4">{data.title}</p>
+          <p className="title is-6">{data.title}</p>
         </div>
         <div className="content">
           <p>{data.description}</p>
         </div>
         {!data.completed ? (
-          <button className="button is-primary is-rounded" onClick={Completed}>Completed</button>
+          <button className="button is-small is-rounded" onClick={Completed}>Completed</button>
         ) : (
-          <button>✅</button>
+          <button className="button is-small is-rounded">✅</button>
         )}
-        <button className="button is-danger is-rounded" onClick={handleDelete}>Delete</button>
+        <button className="button is-small is-rounded" onClick={handleDelete}>Delete</button>
 
-        <button className="button is-info is-light is-rounded">{data.points} points</button>
+        <button className="button is-small is-rounded">{data.points} points</button>
       </div>
     </>
   );
