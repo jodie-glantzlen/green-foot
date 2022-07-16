@@ -10,11 +10,13 @@ function ChallengeCard({ data }) {
 
   const [none, setDisplay] = useState(false)
   const [modal, setModal] = useState(false)
+  const [accepted, setAccepted] = useState()
 
   const handleClick = (evt) => {
     evt.preventDefault()
     // console.log(data.id)
    postMyChallenge({challenge_id: data.id})
+   setAccepted(true)
   }
 
 
@@ -29,7 +31,7 @@ function ChallengeCard({ data }) {
   return (
     <>
 
-      <div className="challengeCard">
+      <div className="challenge-card">
 
         <div>
           <p className="title is-6">{data.title}</p>
@@ -37,11 +39,11 @@ function ChallengeCard({ data }) {
         <div className="content">
           {none && <p>{data.description}</p>}
         </div>
-
         <img src='./Greenfoot.png'></img>
-
         <button className="button is-small is-rounded" onClick={viewModal}>Details</button>
-        <button className="button is-small is-rounded" onClick={handleClick}>Accept</button>
+        <button className="button is-small is-rounded" onClick={handleClick}>
+          {accepted ? '✅' : 'Accept'}
+          </button>
         {none && <button className="button is-small is-rounded">{data.points} points</button>}
       </div>
 

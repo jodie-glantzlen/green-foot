@@ -61,6 +61,7 @@ function MyChallenges () {
           {currentRank === 'Polar Bear Protector' && 
           <img src="/polar-bear.png" alt="Cute polar bear icon" />}
         </span>
+        <p className='creds'>Icons by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from Flaticon</p>
       </div> 
     </>
   )
