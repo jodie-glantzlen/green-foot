@@ -38,7 +38,7 @@ function ChallengeCard({ data }) {
           {none && <p>{data.description}</p>}
         </div>
        
-
+<img src='./Greenfoot.png'></img>
     
       <button className="button is-info is-light is-rounded" onClick={viewModal}>Details</button>
       <button className="button is-primary is-rounded"  onClick={handleClick}>Accept</button>

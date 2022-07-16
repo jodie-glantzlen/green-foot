@@ -56,7 +56,14 @@ function Home() {
     <>
     <h1>My home</h1>
     <div className='challenge_container'>
+
+
+
     {challenges.map(challenge => <ChallengeCard data={challenge} key={challenge.id} />)}
+
+
+
+    
     </div>
     </>
   )
