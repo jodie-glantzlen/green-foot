@@ -28,12 +28,23 @@ body {
 .challenge_container{
 display: flex;
 flex-wrap: wrap;
+justify-content: space-around;
 }
 
 .challengeCard{
-width: 25%;
-height: 200px;
-padding: 60px;
+width: 20%;
+height: 400px;
+padding: 40px;
+border: 2px solid green;
+  border-radius: 25px;
+  margin: 5px;
+  display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.challengeCard img {
+  height: 70%;
 }
 
 .points-section {
@@ -62,16 +73,25 @@ padding: 60px;
   width: 50%; /* Full width */
   height: 50%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: #CCD6A6;
-  background-color:  #CCD6A6; 
+  background-color: #ADCF9F;
+  background-color:  #ADCF9F; 
   display: flex;
   justify-content: center;
+  box-shadow: 10px 10px 8px #888888;
+  border: 10px solid green;
+  border-radius: 25px
 }
 
 .banaa-content {
-  background-color: #DFE8CC;
+  background-color: #CED89E;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
+  position: absolute;
+}
+
+.button {
+  float: right;
+  
 }
