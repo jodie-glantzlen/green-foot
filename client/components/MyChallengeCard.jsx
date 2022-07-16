@@ -34,9 +34,9 @@ function MyChallengeCard({ data, refresh }) {
         ) : (
           <button>✅</button>
         )}
-        <button class="button is-danger is-rounded" onClick={handleDelete}>Delete</button>
+        <button className="button is-danger is-rounded" onClick={handleDelete}>Delete</button>
 
-        <button class="button is-info is-light is-rounded">{data.points} points</button>
+        <button className="button is-info is-light is-rounded">{data.points} points</button>
       </div>
     </>
   );
