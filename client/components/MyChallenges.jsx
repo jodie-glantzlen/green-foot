@@ -19,6 +19,7 @@ function MyChallenges () {
       })
   }
 
+  // POINTS SYSTEM
   const currentPoints = myChallengesArr.reduce((total, challenge) => {
     if (challenge.completed) {
       return total + challenge.points
@@ -27,10 +28,11 @@ function MyChallenges () {
     }
   }, 0)
 
-  let currentRank = 'Tofu Torchbearer'
+  // RANKS SYSTEM
+  let currentRank = ''
 
   if (currentPoints < 20) {
-    currentRank = 'Tofu TorchBearer'
+    currentRank = 'Tofu Torchbearer'
   } else if (currentPoints >= 20 && currentPoints < 60) {
     currentRank = 'Soy Samurai'
   } else if (currentPoints >= 60 && currentPoints < 120) {
@@ -41,12 +43,22 @@ function MyChallenges () {
 
   return (
     <>
-      <h1 className=''>My Challenges </h1>
       <div className='points-section'>
-        <h3>Green Score: {currentPoints}</h3>
-        <h3>Current Rank: {currentRank}</h3>
+        <h3>My Score: {currentPoints}</h3>
+        <h3>My Rank: {currentRank}</h3>
         {/* <ProgressBar completed={currentPoints} /> */}
-      </div>
+        <span>
+          {currentRank === 'Tofu Torchbearer' && 
+          <img src="/torch.png" alt="Cute torch icon" />}
+          {currentRank === 'Soy Samurai' && 
+          <img src="/katana.png" alt="Cute katana icon" />}
+          {currentRank === 'Kale King' && 
+          <img src="/crown.png" alt="Cute crown icon" />}
+          {currentRank === 'Polar Bear Protector' && 
+          <img src="/polar-bear.png" alt="Cute polar bear icon" />}
+        </span>
+      </div>      
+      <h1 className='has-text-centered'>My Challenges </h1>
       <div className='challenge_container'>
         {myChallengesArr.map(challenge => <MyChallengeCard data={challenge} key={challenge.id} refresh={refreshMyChallenges} />)}
       </div>

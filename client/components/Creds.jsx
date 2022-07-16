@@ -1,0 +1,1 @@
+<a href="https://www.flaticon.com/free-icons/polar-bear" title="polar bear icons">Polar bear icons created by Freepik - Flaticon</a>
