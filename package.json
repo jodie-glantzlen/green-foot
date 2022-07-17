@@ -13,7 +13,7 @@
     "dev": "run-p dev:client dev:server",
     "dev:client": "npm run webpack -- --watch",
     "dev:server": "nodemon --watch server server/index.js",
-    "build":  "run-p build:client build:server",
+    "build": "run-p build:client build:server",
     "build:client": "npm run webpack -- --mode production",
     "build:server": "npm run knex -- migrate:latest",
     "lint": "eslint --ext .js,.jsx .",
@@ -43,7 +43,7 @@
     "bulma": "^0.9.4",
     "express": "^4.17.1",
     "knex": "^1.0.2",
-    "pg": "^8.5.1",
+    "pg": "^8.7.3",
     "superagent": "^6.1.0"
   },
   "devDependencies": {
@@ -78,5 +78,5 @@
   },
   "engines": {
     "node": "16.15.0"
-}
+  }
 }
