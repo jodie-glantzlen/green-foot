@@ -4,42 +4,40 @@ import {
   deleteMyChallenge,
   patchMyChallenge,
   postMyChallenge,
-} from "../apis/myChallenges";
+} from "../apis/myChallenges"
 
 function MyChallengeCard({ data, refresh }) {
   const handleDelete = () => {
-    deleteMyChallenge(data.myChallengeId);
-    refresh();
-  };
+    deleteMyChallenge(data.myChallengeId)
+    refresh()
+  }
 
   const Completed = (evt) => {
-    evt.preventDefault();
+    evt.preventDefault()
     // console.log(data.id)
-    patchMyChallenge({ id: data.myChallengeId, completed: true });
-    refresh();
-  };
+    patchMyChallenge({ id: data.myChallengeId, completed: true })
+    refresh()
+  }
 
   return (
     <>
-      <div className="challengeCard">
-     
-        <div className="media-content">
-          <p className="title is-4">{data.title}</p>
+      <div className="my-challenge-card">
+        <h2 className="title">{data.title}</h2>
+        <button className="button is-rounded">
+          {data.points} points
+        </button>
+        <p>{data.description}</p>
+        <div className="complete-or-delete">
+          {!data.completed ? (
+            <button className="button is-small is-rounded" onClick={Completed}>Completed</button>
+          ) : (
+            <button className="button is-small is-rounded">✅</button>
+          )}
+          <button className="button is-small is-rounded" onClick={handleDelete}>Delete</button>
         </div>
-        <div className="content">
-          <p>{data.description}</p>
-        </div>
-        {!data.completed ? (
-          <button className="button is-primary is-rounded" onClick={Completed}>Completed</button>
-        ) : (
-          <button>✅</button>
-        )}
-        <button class="button is-danger is-rounded" onClick={handleDelete}>Delete</button>
-
-        <button class="button is-info is-light is-rounded">{data.points} points</button>
       </div>
     </>
-  );
+  )
 }
 
-export default MyChallengeCard;
+export default MyChallengeCard

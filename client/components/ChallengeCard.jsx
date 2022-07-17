@@ -1,32 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from './Modal'
 
 import { postMyChallenge } from '../apis/myChallenges'
 
 function ChallengeCard({ data }) {
+  const [none, setDisplay] = useState(false)
+  const [modal, setModal] = useState(false)
+  const [accepted, setAccepted] = useState()
 
   const handleClick = (evt) => {
     evt.preventDefault()
     // console.log(data.id)
-   postMyChallenge({challenge_id: data.id})
+    postMyChallenge({ challenge_id: data.id })
+    setAccepted(true)
   }
 
+  const viewModal = (evt) => {
+    if (modal === false) {
+      setModal(true)
+    } if (modal === true) {
+      setModal(false)
+    }
+  }
   return (
     <>
-
-<div className="challengeCard">
-
-<div className="media-content">
-          <p className="title is-4">{data.title}</p>
-        </div>
-        <div className="content">
-          <p>{data.description}</p>
-        </div>
-      <button className="button is-primary is-rounded"  onClick={handleClick}>Accept</button>
-      <button class="button is-info is-light is-rounded">{data.points} points</button>
+      <div className="challenge-card">
+        <h2 className="title">{data.title}</h2>
+        {none && <p>{data.description}</p>}
+        <img src='./Greenfoot.png'></img>
+        <p>Level: {data.level}</p>
+        <button className="button is-small is-rounded" onClick={viewModal}>Details</button>
+        <button className="button is-small is-rounded" onClick={handleClick}>
+          {accepted ? '✅' : 'Accept'}
+        </button>
+        {none && <button className="button is-small is-rounded">{data.points} points</button>}
+        {modal && <Modal data={data} viewModal={viewModal} handleClick={handleClick} />}
       </div>
     </>
   )
 }
-
 
 export default ChallengeCard
