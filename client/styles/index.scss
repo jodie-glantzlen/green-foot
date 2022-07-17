@@ -37,10 +37,12 @@ a:hover {
   }
 }
 
-.challenge_container{
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
+.challenge_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  justify-content: space-evenly;
+
 }
 
 .challenge-card, .my-challenge-card {
