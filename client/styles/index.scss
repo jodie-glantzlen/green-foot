@@ -101,11 +101,10 @@ a:hover {
   height: 50%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: #ADCF9F;
-  background-color:  #ADCF9F; 
   display: flex;
   justify-content: center;
   box-shadow: 10px 10px 8px #888888;
-  border: 10px solid green;
+  border: 10px solid #4E944F ;
   border-radius: 25px
 }
 
@@ -116,9 +115,4 @@ a:hover {
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
   position: absolute;
-}
-
-.creds {
-  font-size: smaller;
-  margin-left: 40%;
 }

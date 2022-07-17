@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { fetchAllMyChallenges } from '../apis/myChallenges'
 import MyChallengeCard from './MyChallengeCard'
 
-function MyChallenges () {
+function MyChallenges() {
 
   const [myChallengesArr, setMyChallengesArr] = useState([])
 
@@ -42,7 +42,7 @@ function MyChallenges () {
   }
 
   return (
-    <>     
+    <>
       <h1 className='has-text-centered'>My Challenges </h1>
       <div className='challenge_container'>
         {myChallengesArr.map(challenge => <MyChallengeCard data={challenge} key={challenge.id} refresh={refreshMyChallenges} />)}
@@ -51,18 +51,19 @@ function MyChallenges () {
         <h3>My Score: {currentPoints}</h3>
         <h3>My Rank: {currentRank}</h3>
         {/* <ProgressBar completed={currentPoints} /> */}
-        <span>
-          {currentRank === 'Tofu Torchbearer' && 
-          <img src="/torch.png" alt="Cute torch icon" />}
-          {currentRank === 'Soy Samurai' && 
-          <img src="/katana.png" alt="Cute katana icon" />}
-          {currentRank === 'Kale King' && 
-          <img src="/crown.png" alt="Cute crown icon" />}
-          {currentRank === 'Polar Bear Protector' && 
-          <img src="/polar-bear.png" alt="Cute polar bear icon" />}
-        </span>
-        <p className='creds'>Icons by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from Flaticon</p>
-      </div> 
+        <div>
+          <a href="https://www.flaticon.com/authors/freepik">
+            {currentRank === 'Tofu Torchbearer' &&
+              <img src="/torch.png" alt="Cute torch icon" />}
+            {currentRank === 'Soy Samurai' &&
+              <img src="/katana.png" alt="Cute katana icon" />}
+            {currentRank === 'Kale King' &&
+              <img src="/crown.png" alt="Cute crown icon" />}
+            {currentRank === 'Polar Bear Protector' &&
+              <img src="/polar-bear.png" alt="Cute polar bear icon" />}
+          </a>
+        </div>
+      </div>
     </>
   )
 }
