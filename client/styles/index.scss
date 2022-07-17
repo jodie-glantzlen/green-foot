@@ -25,12 +25,6 @@ a:hover {
   top: 0;
   width: 100%;
 
-  img {
-    width: 5%;
-    height: auto;
-    mix-blend-mode: multiply;
-  }
-
   a {
     margin-left: 20px;
     color: white
@@ -47,31 +41,33 @@ a:hover {
 
 .challenge-card, .my-challenge-card {
   width: 250px;
-  height: 400px;
-  padding: 20px;
+  height: 350px;
+  padding: 10px;
   border: 2px solid green;
   border-radius: 25px;
   margin: 5px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: space-between;
-  background-color: #F7EDDB;
+  display: flex;  
+  flex-direction: column;
+  flex-wrap: wrap;  
+  align-items: center;
+  justify-content: space-around;
+  align-content: space-around;
+  background-color: #F7EDDB;  
+  .title {
+    font-size: 14px;
+  }
 
   img {
     mix-blend-mode: multiply;
+    width: 65%;
+  }
+
+  .complete-or-delete {
+    display: flex;
+    column-gap: 10px;
   }
 }
 
-.challenge-card img {
-  height: 70%;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .points-section {
   display: flex;
