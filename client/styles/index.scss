@@ -8,6 +8,11 @@ body {
   background-color: #FCF8E8;
 }
 
+h1 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
 a {
   color: white;
 }
@@ -25,12 +30,6 @@ a:hover {
   top: 0;
   width: 100%;
 
-  img {
-    width: 5%;
-    height: auto;
-    mix-blend-mode: multiply;
-  }
-
   a {
     margin-left: 20px;
     color: white
@@ -47,31 +46,33 @@ a:hover {
 
 .challenge-card, .my-challenge-card {
   width: 250px;
-  height: 400px;
-  padding: 20px;
+  height: 350px;
+  padding: 10px;
   border: 2px solid green;
   border-radius: 25px;
   margin: 5px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: space-between;
-  background-color: #F7EDDB;
+  display: flex;  
+  flex-direction: column;
+  flex-wrap: wrap;  
+  align-items: center;
+  justify-content: space-around;
+  align-content: space-around;
+  background-color: #F7EDDB;  
+  .title {
+    font-size: 14px;
+  }
 
   img {
     mix-blend-mode: multiply;
+    width: 65%;
+  }
+
+  .complete-or-delete {
+    display: flex;
+    column-gap: 10px;
   }
 }
 
-.challenge-card img {
-  height: 70%;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .points-section {
   display: flex;
@@ -105,11 +106,10 @@ a:hover {
   height: 50%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: #ADCF9F;
-  background-color:  #ADCF9F; 
   display: flex;
   justify-content: center;
   box-shadow: 10px 10px 8px #888888;
-  border: 10px solid green;
+  border: 10px solid #4E944F ;
   border-radius: 25px
 }
 
@@ -120,9 +120,4 @@ a:hover {
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
   position: absolute;
-}
-
-.creds {
-  font-size: smaller;
-  margin-left: 40%;
 }
