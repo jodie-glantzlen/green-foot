@@ -23,7 +23,7 @@ function MyChallengeCard({ data, refresh }) {
     <>
       <div className="my-challenge-card">
         <h2 className="title">{data.title}</h2>
-        <button className="button is-small is-rounded">
+        <button className="button is-rounded">
           {data.points} points
         </button>
         <p>{data.description}</p>
