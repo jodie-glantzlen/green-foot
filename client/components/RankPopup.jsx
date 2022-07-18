@@ -6,10 +6,28 @@ function RankPopup ({viewRankPopup, rank}) {
     <div className="overlay">
       <div className="banaa">
         <div className="banaa-content">
-          <p className="title is-4">{rank}</p>
-          <button className="button is-small is-rounded" onClick={evt => viewRankPopup(evt)}>
+          <p className="title is-4">
+            New Rank: {rank}
+          </p>
+          <p>
+            Well done!
+          </p>
+          {rank !== 'Polar Bear Protector' &&
+            <div>
+              <p>
+                You just unlocked new challenges.
+              </p>
+              <button onClick={evt => viewRankPopup(evt)}>
+                <a href="/home">Go and grab them here</a>
+              </button>
+              </div>}
+              <p>
+              Thanks for saving the planet 🌏
+              </p>
+              {rank == 'Polar Bear Protector' && <button className="button is-small is-rounded" onClick={evt => viewRankPopup(evt)}>
             Close
-          </button>
+          </button>}
+          
         </div>
       </div>
     </div>
