@@ -6,7 +6,7 @@ export const Welcome = () => {
   return (
     <>
     <div className="columns is-mobile is-multiline is-centered">
-      <div class="column is-narrow">
+      <div className="column is-narrow">
         <div className="welcome-container">
       <h1>Welcome to</h1>
       <img className="welcome-image" src="./Greenfoot.png"></img>
