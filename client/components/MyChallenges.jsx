@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-//import ProgressBar from '@ramonak/react-progress-bar'
+import ProgressBar from '@ramonak/react-progress-bar'
 
 import { fetchAllMyChallenges } from '../apis/myChallenges'
 import MyChallengeCard from './MyChallengeCard'
@@ -41,6 +41,8 @@ function MyChallenges({
     }
   }, 0)
 
+  const percent = Math.round((currentPoints * 100) / 120)
+
   useEffect(() => {
    
     if (currentPoints < 20) {
@@ -74,10 +76,22 @@ function MyChallenges({
       <div className='challenge_container'>
         {myChallengesArr.map(challenge => <MyChallengeCard data={challenge} key={challenge.id} refresh={refreshMyChallenges} />)}
       </div>
+      <div>
+        <p className='progress-bar-msg'>
+          {percent}% of the way to become a Polar Bear Protector!
+        </p>
+        <ProgressBar 
+        completed={percent} 
+        maxCompleted={100} 
+        width="98%"
+        margin="20px"
+        bgColor="#CC704B"
+         />
+      </div>
+
       <div className='points-section'>
         <h3>My Score: {currentPoints}</h3>
         <h3>My Rank: {currentRank}</h3>
-        {/* <ProgressBar completed={currentPoints} /> */}
         <div>
           <a href="https://www.flaticon.com/authors/freepik">
             {currentRank === 'Tofu Torchbearer' &&
