@@ -9,25 +9,25 @@ function RankPopup ({viewRankPopup, rank}) {
           <p className="title is-4">
             New Rank: {rank}
           </p>
-          <p>
-            Well done!
-          </p>
+
           {rank !== 'Polar Bear Protector' &&
             <div>
               <p>
-                You just unlocked new challenges.
+                Well done! You just unlocked new challenges!
               </p>
-              <button onClick={evt => viewRankPopup(evt)}>
-                <a href="/home">Go and grab them here</a>
+              <p>Go and grab them on the Home page.</p>
+              <button className="button is-small is-rounded" onClick={evt => viewRankPopup(evt)}>Got it!</button>
+            </div>
+          }
+          {rank == 'Polar Bear Protector' &&
+            <div>
+              <p>Awesome, you completed all the challenges!</p>
+              <p>Thanks for helping the planet 🌏</p>
+              <button className="button is-small is-rounded" onClick={evt => viewRankPopup(evt)}>
+                Close
               </button>
-              </div>}
-              <p>
-              Thanks for saving the planet 🌏
-              </p>
-              {rank == 'Polar Bear Protector' && <button className="button is-small is-rounded" onClick={evt => viewRankPopup(evt)}>
-            Close
-          </button>}
-          
+            </div>
+          }
         </div>
       </div>
     </div>
