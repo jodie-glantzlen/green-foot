@@ -5,7 +5,13 @@ import { fetchAllMyChallenges } from '../apis/myChallenges'
 import MyChallengeCard from './MyChallengeCard'
 import RankPopup from './RankPopup'
 
-function MyChallenges() {
+function MyChallenges({
+  setSoyFlag,
+  soyFlag,
+  setKaleFlag,
+  kaleFlag,
+  setBearFlag,
+  bearFlag}) {
   const [currentRank, setcurrentRank] = useState('')
   const [showRank, setShowRank] = useState(false)
   const [myChallengesArr, setMyChallengesArr] = useState([])
@@ -21,17 +27,10 @@ function MyChallenges() {
       })
   }
 
-
   useEffect(() => {
     setShowRank(true)
   }, [currentRank])
 
-
-  useEffect(() => {
-   setTimeout(() => {
-    setShowRank(false)
-   }, 3000); 
-  }, [])
 
   // POINTS SYSTEM
   const currentPoints = myChallengesArr.reduce((total, challenge) => {
@@ -42,22 +41,8 @@ function MyChallenges() {
     }
   }, 0)
 
-  // RANKS SYSTEM
-  // let currentRank = ''
-
-  // if (currentPoints < 20) {
-  //   currentRank = 'Tofu Torchbearer'
-  // } else if (currentPoints >= 20 && currentPoints < 60) {
-  //   currentRank = 'Soy Samurai'
-  // } else if (currentPoints >= 60 && currentPoints < 120) {
-  //   currentRank = 'Kale King'
-  // } else {
-  //   currentRank = 'Polar Bear Protector'
-  // }
-
-
-
   useEffect(() => {
+   
     if (currentPoints < 20) {
       setcurrentRank('Tofu Torchbearer')
     } else if (currentPoints >= 20 && currentPoints < 60) {
@@ -73,8 +58,16 @@ function MyChallenges() {
   const viewRankPopup = (evt) => {
     if (showRank === true) {
       setShowRank(false)
+      if(currentPoints === 20) {
+        setSoyFlag(true)
+      } else if(currentPoints === 60) {
+        setKaleFlag(true)
+      } else if(currentPoints === 120) {
+        setBearFlag(true)
+      }
     }
   }
+
   return (
     <>
       <h1 className='has-text-centered'>My Challenges </h1>
@@ -100,9 +93,9 @@ function MyChallenges() {
       </div>
 
 
-      {(currentPoints === 20 && showRank === true) && <RankPopup viewRankPopup={viewRankPopup} rank={currentRank} />}
-      {(currentPoints === 60 && showRank === true) && <RankPopup viewRankPopup={viewRankPopup} rank={currentRank} />}
-      {(currentPoints === 120 && showRank === true) && <RankPopup viewRankPopup={viewRankPopup} rank={currentRank} />}
+      {(currentPoints === 20 && showRank === true && soyFlag === false) && <RankPopup viewRankPopup={viewRankPopup} rank={currentRank} />}
+      {(currentPoints === 60 && showRank === true && kaleFlag === false) && <RankPopup viewRankPopup={viewRankPopup} rank={currentRank} />}
+      {(currentPoints === 120 && showRank === true && bearFlag === false) && <RankPopup viewRankPopup={viewRankPopup} rank={currentRank} />}
     </>
   )
 }
