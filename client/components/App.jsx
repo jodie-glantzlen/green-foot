@@ -3,6 +3,7 @@ import MyChallenges from './MyChallenges'
 import Home from './Home'
 import Nav from './Nav'
 import { Routes, Route } from 'react-router-dom'
+import { Welcome } from './Welcome'
 
 function App() {
 
@@ -11,9 +12,9 @@ function App() {
       <Nav />
 
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
         <Route path='/mychallenges' element={<MyChallenges />} />
-
+        <Route path='/' element={<Welcome />} />
       </Routes>
     </>
   )
