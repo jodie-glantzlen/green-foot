@@ -121,3 +121,23 @@ a:hover {
   width: 80%; /* Could be more or less, depending on screen size */
   position: absolute;
 }
+.welcome-container {
+  display: grid;
+  justify-content: center;
+  margin: auto;
+  width: 60%;
+  border: 5px solid #4E944F;
+  padding: 10px;
+}
+.black-text-please {
+  color: black;
+  border: 4px solid #000000;
+}
+h1 {
+  text-align: center;
+}
+.welcome-image{
+align-content: center;
+margin: auto;
+mix-blend-mode: multiply;
+}
