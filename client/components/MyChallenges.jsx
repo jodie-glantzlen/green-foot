@@ -4,6 +4,11 @@ import ProgressBar from '@ramonak/react-progress-bar'
 import { fetchAllMyChallenges } from '../apis/myChallenges'
 import MyChallengeCard from './MyChallengeCard'
 import RankPopup from './RankPopup'
+import Profile from './Profile'
+import { useAuth0 } from '@auth0/auth0-react';
+
+
+
 
 function MyChallenges({
   setSoyFlag,
@@ -15,7 +20,7 @@ function MyChallenges({
   const [currentRank, setcurrentRank] = useState('')
   const [showRank, setShowRank] = useState(false)
   const [myChallengesArr, setMyChallengesArr] = useState([])
-
+  const { isAuthenticated } = useAuth0();
   useEffect(() => {
     refreshMyChallenges()
   }, [])
@@ -72,6 +77,7 @@ function MyChallenges({
 
   return (
     <>
+    <Profile/>
       <h1 className='has-text-centered'>My Challenges </h1>
       <div className='challenges-container'>
         {myChallengesArr.map(challenge => <MyChallengeCard data={challenge} key={challenge.id} refresh={refreshMyChallenges} />)}
@@ -98,24 +104,33 @@ function MyChallenges({
         <h3>My Rank: {currentRank}</h3>
         <div>
           <a href="https://www.flaticon.com/authors/freepik">
-            {currentRank === 'Tofu Torchbearer' &&
-              <img src="/torch.png" alt="Cute torch icon" />}
-            {currentRank === 'Soy Samurai' &&
-              <img src="/katana.png" alt="Cute katana icon" />}
-            {currentRank === 'Kale King' &&
-              <img src="/crown.png" alt="Cute crown icon" />}
-            {currentRank === 'Polar Bear Protector' &&
-              <img src="/polar-bear.png" alt="Cute polar bear icon" />}
+            {currentRank === "Tofu Torchbearer" && (
+              <img src="/torch.png" alt="Cute torch icon" />
+            )}
+            {currentRank === "Soy Samurai" && (
+              <img src="/katana.png" alt="Cute katana icon" />
+            )}
+            {currentRank === "Kale King" && (
+              <img src="/crown.png" alt="Cute crown icon" />
+            )}
+            {currentRank === "Polar Bear Protector" && (
+              <img src="/polar-bear.png" alt="Cute polar bear icon" />
+            )}
           </a>
         </div>
       </div>
 
-
-      {(currentPoints === 20 && showRank === true && soyFlag === false) && <RankPopup viewRankPopup={viewRankPopup} rank={currentRank} />}
-      {(currentPoints === 60 && showRank === true && kaleFlag === false) && <RankPopup viewRankPopup={viewRankPopup} rank={currentRank} />}
-      {(currentPoints === 120 && showRank === true && bearFlag === false) && <RankPopup viewRankPopup={viewRankPopup} rank={currentRank} />}
+      {currentPoints === 20 && showRank === true && soyFlag === false && (
+        <RankPopup viewRankPopup={viewRankPopup} rank={currentRank} />
+      )}
+      {currentPoints === 60 && showRank === true && kaleFlag === false && (
+        <RankPopup viewRankPopup={viewRankPopup} rank={currentRank} />
+      )}
+      {currentPoints === 120 && showRank === true && bearFlag === false && (
+        <RankPopup viewRankPopup={viewRankPopup} rank={currentRank} />
+      )}
     </>
-  )
+  );
 }
 
 
