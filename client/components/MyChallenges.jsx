@@ -5,6 +5,10 @@ import { fetchAllMyChallenges } from '../apis/myChallenges'
 import MyChallengeCard from './MyChallengeCard'
 import RankPopup from './RankPopup'
 import Profile from './Profile'
+import { useAuth0 } from '@auth0/auth0-react';
+
+
+
 
 function MyChallenges({
   setSoyFlag,
@@ -16,7 +20,7 @@ function MyChallenges({
   const [currentRank, setcurrentRank] = useState('')
   const [showRank, setShowRank] = useState(false)
   const [myChallengesArr, setMyChallengesArr] = useState([])
-
+  const { isAuthenticated } = useAuth0();
   useEffect(() => {
     refreshMyChallenges()
   }, [])
