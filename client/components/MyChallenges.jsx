@@ -77,31 +77,29 @@ function MyChallenges({
 
   return (
     <>
-      <Profile />
-      <h1 className="has-text-centered">My Challenges </h1>
-      <div className="challenge_container">
-        {myChallengesArr.map((challenge) => (
-          <MyChallengeCard
-            data={challenge}
-            key={challenge.id}
-            refresh={refreshMyChallenges}
-          />
-        ))}
+    <Profile/>
+      <h1 className='has-text-centered'>My Challenges </h1>
+      <div className='challenges-container'>
+        {myChallengesArr.map(challenge => <MyChallengeCard data={challenge} key={challenge.id} refresh={refreshMyChallenges} />)}
+      </div>      
+      <div className='tips-msg-container'>
+        <p>Not sure where to start? Check out our <a href="/tips">Tips & Tricks</a> page.</p>
       </div>
       <div>
-        <p className="progress-bar-msg">
+        <ProgressBar 
+        completed={percent} 
+        maxCompleted={100} 
+        width="98%"
+        margin="20px"
+        bgColor="#CC704B"
+         />
+        <p className='progress-bar-msg'>
           {percent}% of the way to become a Polar Bear Protector!
         </p>
-        <ProgressBar
-          completed={percent}
-          maxCompleted={100}
-          width="98%"
-          margin="20px"
-          bgColor="#CC704B"
-        />
       </div>
 
-      <div className="points-section">
+
+      <div className='points-section'>
         <h3>My Score: {currentPoints}</h3>
         <h3>My Rank: {currentRank}</h3>
         <div>
