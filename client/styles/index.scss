@@ -2,7 +2,6 @@
 
 
 // GENERAL
-
 html, 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -55,7 +54,6 @@ a:hover {
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   justify-content: space-evenly;
-
 }
 
 // CARDS
@@ -178,11 +176,6 @@ a:hover {
 
 // ANIMATION
 
-.welcome-page-container {
-  // height: 100vh;
-  // width: 100vw;
-}
-
 .animated-title {
   font-family: "Montserrat";
   max-width: 40ch;
@@ -193,7 +186,16 @@ a:hover {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 80%;
+    animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+  }
 
   .one {
     display: flex;
@@ -218,7 +220,7 @@ a:hover {
   text-align: center;
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-  font-size: 2em;
+  font-size: 0.5em;
 }
 
 @keyframes scale {
@@ -286,17 +288,9 @@ span:nth-child(13) {
   animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-// span:nth-child(14) {
-//   animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-// }
-
 @keyframes fade-in {
   100% {
     opacity: 1;
     filter: blur(0);
   }
-}
-
-.animated-content {
-  font-size: 50px;
 }
