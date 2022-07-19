@@ -44,7 +44,7 @@ a:hover {
 
 }
 
-.challenge-card, .my-challenge-card {
+.challenge-card, .my-challenge-card, .tip-card{
   width: 250px;
   height: 350px;
   padding: 10px;
@@ -53,9 +53,8 @@ a:hover {
   margin: 5px;
   display: flex;  
   flex-direction: column;
-  flex-wrap: wrap;  
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: space-around;
   background-color: #F7EDDB;  
   .title {
@@ -158,4 +157,15 @@ mix-blend-mode: multiply;
 
 .progress-bar-msg {
   margin-left: 20px;
+}
+
+.tips-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around
+}
+
+.tips-container a {
+  color: #000000;
 }
