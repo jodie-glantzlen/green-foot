@@ -29,6 +29,7 @@ a:hover {
   position: fixed;
   top: 0;
   width: 100%;
+  justify-content: space-between;
 
   a {
     margin-left: 20px;
@@ -169,3 +170,9 @@ mix-blend-mode: multiply;
 .tips-container a {
   color: #000000;
 }
+
+// .LoginButton{
+// display: flex;
+// justify-content: flex-end;
+
+// }
