@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LoginButton from "./LoginButton";
 import LogoutButton from "./LogoutButton";
+import Profile from "./Profile";
 
 function Nav() {
   return (
@@ -12,6 +13,7 @@ function Nav() {
       <Link to="/tips">Tips & Tricks!</Link>
       <LoginButton/>
       <LogoutButton/>
+      <Profile/>
 
     </nav>
   )
