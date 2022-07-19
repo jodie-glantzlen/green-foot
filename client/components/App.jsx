@@ -4,6 +4,7 @@ import Home from './Home'
 import Nav from './Nav'
 import { Routes, Route } from 'react-router-dom'
 import { Welcome } from './Welcome'
+import TipsTricks from './TipsTricks'
 
 function App() {
 const [soyFlag, setSoyFlag] = useState(false)
@@ -24,6 +25,7 @@ const [bearFlag, setBearFlag] = useState(false)
           setBearFlag={setBearFlag} bearFlag={bearFlag}
         />} />
         <Route path='/' element={<Welcome />} />
+        <Route path='/tips' element={<TipsTricks />} />
       </Routes>
     </>
   )
