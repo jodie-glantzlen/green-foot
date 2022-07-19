@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LoginButton from "./LoginButton";
+import LogoutButton from "./LogoutButton";
 
 function Nav() {
   return (
@@ -8,6 +10,8 @@ function Nav() {
       <Link to="/home">Home</Link>
       <Link to="/mychallenges">My Challenges</Link>
       <Link to="/tips">Tips & Tricks!</Link>
+      <LoginButton/>
+      <LogoutButton/>
 
     </nav>
   )

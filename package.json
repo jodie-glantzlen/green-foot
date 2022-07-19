@@ -38,6 +38,7 @@
     ]
   },
   "dependencies": {
+    "@auth0/auth0-react": "^1.10.2",
     "@ramonak/react-progress-bar": "^5.0.1",
     "@vscode/sqlite3": "^5.0.7",
     "bulma": "^0.9.4",
