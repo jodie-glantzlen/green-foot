@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const Welcome = () => {
   return (
     <div className="welcome-page-container">
-      <h1 className="animated-title">
+      <div className="animated-title">
         <span>Welcome</span>
         <span>to</span><br />
         <span><img src="/blended.png" alt="Green Foot logo" /></span><br />
@@ -16,8 +16,8 @@ export const Welcome = () => {
         <span className="animated-content">save</span>
         <span className="animated-content">the</span>
         <span className="animated-content">planet</span><br />
-        <span><button>Login</button></span>
-      </h1>
+        <span><button>Get Started</button></span>
+      </div>
     </div>
   );
 };

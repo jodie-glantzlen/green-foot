@@ -8,6 +8,20 @@ function RankPopup ({viewRankPopup, rank}) {
           <p className="title is-4">
             New Rank: {rank}
           </p>
+        <div className="popup-icons">
+          {rank === "Tofu Torchbearer" && (
+            <img src="/torch.png" alt="Cute torch icon" />
+          )}
+          {rank === "Soy Samurai" && (
+            <img src="/katana.png" alt="Cute katana icon" />
+          )}
+          {rank === "Kale King" && (
+            <img src="/crown.png" alt="Cute crown icon" />
+          )}
+          {rank === "Polar Bear Protector" && (
+            <img src="/polar-bear.png" alt="Cute polar bear icon" />
+          )}
+        </div>
           {rank !== 'Polar Bear Protector' &&
             <div>
               <p>

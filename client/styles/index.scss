@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
 
+
+// GENERAL
+
 html, 
 body {
   font-family: 'Montserrat', sans-serif;
-  padding-top: 40px;
+  padding-top: 30px;
   padding-bottom: 40px;
   background-color: #FCF8E8;
 }
@@ -22,6 +25,8 @@ a:hover {
   font-weight: bold;
 }
 
+// TOP NAV BAR
+
 .navbar {
   display: flex;
   align-items: center;
@@ -30,12 +35,19 @@ a:hover {
   top: 0;
   width: 100%;
   justify-content: space-between;
+  z-index: 100;
 
   a {
     margin-left: 20px;
     color: white
   }
+
+  .login-button {
+    margin-right: 20px;
+  }
 }
+
+// CHALLENGES
 
 .challenges-container {
   display: grid;
@@ -45,11 +57,13 @@ a:hover {
 
 }
 
+// CARDS
+
 .challenge-card, .my-challenge-card, .tip-card{
   width: 250px;
   height: 350px;
   padding: 10px;
-  border: 2px solid green;
+  border: 2px solid #CC704B;
   border-radius: 25px;
   margin: 5px;
   display: flex;  
@@ -76,6 +90,8 @@ a:hover {
 }
 
 
+// BOTTOM BAR
+
 .points-section {
   display: flex;
   background-color: #4E944F;
@@ -98,6 +114,8 @@ a:hover {
     margin-left: 20px;
   }
 }
+
+// POPUPS
 
 .overlay {
   position: fixed;
@@ -126,44 +144,23 @@ a:hover {
   align-items: center;
   align-content: space-around;
   box-shadow: 10px 10px 8px #888888;
-  border: 2px solid #4E944F ;
+  border: 2px solid #CC704B ;
   border-radius: 25px;
   opacity: 1;
   
 }
 
-// .banaa-content {
-//   background-color: #CED89E;
-//   margin: 15% auto; /* 15% from the top and centered */
-//   padding: 20px;
-//   border: 1px solid #888;
-//   width: 80%; /* Could be more or less, depending on screen size */
-//   position: absolute;
-//   z-index: 1;
-// }
-
-.welcome-container {
-  display: grid;
-  justify-content: center;
-  margin: auto;
-  width: 60%;
-  border: 5px solid #4E944F;
-  padding: 10px;
+.popup-icons {
+  width: 10%;
 }
 
-.black-text-please {
-  border: 4px solid #000000;
-}
-
-.welcome-image{
-align-content: center;
-margin: auto;
-mix-blend-mode: multiply;
-}
+// PROGRESS BAR
 
 .progress-bar-msg {
   margin-left: 20px;
 }
+
+// TIPS & TRICKS
 
 .tips-container {
   display: flex;
@@ -179,13 +176,19 @@ mix-blend-mode: multiply;
 }
 
 // ANIMATION
+
+.welcome-page-container {
+  height: 100vh;
+  width: 100vw;
+}
+
 .animated-title {
   font-family: "Montserrat";
   max-width: 40ch;
   text-align: center;
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-  font-size: 90px;
+  font-size: 6em;
 }
 
 .animated-content {
@@ -194,7 +197,7 @@ mix-blend-mode: multiply;
   text-align: center;
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-  font-size: 50px;
+  font-size: 2em;
 }
 
 @keyframes scale {
