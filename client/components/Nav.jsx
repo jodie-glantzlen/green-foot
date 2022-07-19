@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AuthenticationButton from "./authentication-button";
 import LoginButton from "./LoginButton";
 import LogoutButton from "./LogoutButton";
 import Profile from "./Profile";
@@ -11,9 +12,7 @@ function Nav() {
       <Link to="/home">Home</Link>
       <Link to="/mychallenges">My Challenges</Link>
       <Link to="/tips">Tips & Tricks!</Link>
-      <LoginButton/>
-      <LogoutButton/>
-      <Profile/>
+     <AuthenticationButton />
 
     </nav>
   )

@@ -33,17 +33,12 @@ const Profile = () => {
     getUserMetadata();
   }, [getAccessTokenSilently, user?.sub]);
 
+
+
   return (
     isAuthenticated && (
       <div>
-        <h2>Hello {user.name} :)</h2>
-        <p>{user.email}</p>
-        <h3>User Metadata</h3>
-        {userMetadata ? (
-          <pre>{JSON.stringify(userMetadata, null, 2)}</pre>
-        ) : (
-          "No user metadata defined"
-        )}
+        <h2>Hello {user.nickname} :)</h2>      
       </div>
     )
   );

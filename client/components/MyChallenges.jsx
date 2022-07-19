@@ -4,6 +4,7 @@ import ProgressBar from '@ramonak/react-progress-bar'
 import { fetchAllMyChallenges } from '../apis/myChallenges'
 import MyChallengeCard from './MyChallengeCard'
 import RankPopup from './RankPopup'
+import Profile from './Profile'
 
 function MyChallenges({
   setSoyFlag,
@@ -72,46 +73,62 @@ function MyChallenges({
 
   return (
     <>
-      <h1 className='has-text-centered'>My Challenges </h1>
-      <div className='challenge_container'>
-        {myChallengesArr.map(challenge => <MyChallengeCard data={challenge} key={challenge.id} refresh={refreshMyChallenges} />)}
+      <Profile />
+      <h1 className="has-text-centered">My Challenges </h1>
+      <div className="challenge_container">
+        {myChallengesArr.map((challenge) => (
+          <MyChallengeCard
+            data={challenge}
+            key={challenge.id}
+            refresh={refreshMyChallenges}
+          />
+        ))}
       </div>
       <div>
-        <p className='progress-bar-msg'>
+        <p className="progress-bar-msg">
           {percent}% of the way to become a Polar Bear Protector!
         </p>
-        <ProgressBar 
-        completed={percent} 
-        maxCompleted={100} 
-        width="98%"
-        margin="20px"
-        bgColor="#CC704B"
-         />
+        <ProgressBar
+          completed={percent}
+          maxCompleted={100}
+          width="98%"
+          margin="20px"
+          bgColor="#CC704B"
+        />
       </div>
 
-      <div className='points-section'>
+      <div className="points-section">
         <h3>My Score: {currentPoints}</h3>
         <h3>My Rank: {currentRank}</h3>
         <div>
           <a href="https://www.flaticon.com/authors/freepik">
-            {currentRank === 'Tofu Torchbearer' &&
-              <img src="/torch.png" alt="Cute torch icon" />}
-            {currentRank === 'Soy Samurai' &&
-              <img src="/katana.png" alt="Cute katana icon" />}
-            {currentRank === 'Kale King' &&
-              <img src="/crown.png" alt="Cute crown icon" />}
-            {currentRank === 'Polar Bear Protector' &&
-              <img src="/polar-bear.png" alt="Cute polar bear icon" />}
+            {currentRank === "Tofu Torchbearer" && (
+              <img src="/torch.png" alt="Cute torch icon" />
+            )}
+            {currentRank === "Soy Samurai" && (
+              <img src="/katana.png" alt="Cute katana icon" />
+            )}
+            {currentRank === "Kale King" && (
+              <img src="/crown.png" alt="Cute crown icon" />
+            )}
+            {currentRank === "Polar Bear Protector" && (
+              <img src="/polar-bear.png" alt="Cute polar bear icon" />
+            )}
           </a>
         </div>
       </div>
 
-
-      {(currentPoints === 20 && showRank === true && soyFlag === false) && <RankPopup viewRankPopup={viewRankPopup} rank={currentRank} />}
-      {(currentPoints === 60 && showRank === true && kaleFlag === false) && <RankPopup viewRankPopup={viewRankPopup} rank={currentRank} />}
-      {(currentPoints === 120 && showRank === true && bearFlag === false) && <RankPopup viewRankPopup={viewRankPopup} rank={currentRank} />}
+      {currentPoints === 20 && showRank === true && soyFlag === false && (
+        <RankPopup viewRankPopup={viewRankPopup} rank={currentRank} />
+      )}
+      {currentPoints === 60 && showRank === true && kaleFlag === false && (
+        <RankPopup viewRankPopup={viewRankPopup} rank={currentRank} />
+      )}
+      {currentPoints === 120 && showRank === true && bearFlag === false && (
+        <RankPopup viewRankPopup={viewRankPopup} rank={currentRank} />
+      )}
     </>
-  )
+  );
 }
 
 

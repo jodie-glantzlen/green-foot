@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { fetchAllChallenges } from '../apis/challenges'
 import { fetchAllMyChallenges } from '../apis/myChallenges'
 import ChallengeCard from './ChallengeCard'
+import Profile from './Profile'
 
 function Home () {
   const [challenges, setChallenges] = useState([])
@@ -47,6 +48,7 @@ function Home () {
 
   return (
     <>
+    <Profile />
       <h1 className="is-title has-text-centered">Challenges unlocked</h1>
       <div className='challenge_container'>
         {challenges.map(challenge => <ChallengeCard data={challenge} key={challenge.id} />)}
