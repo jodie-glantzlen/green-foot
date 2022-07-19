@@ -9,6 +9,7 @@ body {
   padding-top: 30px;
   padding-bottom: 40px;
   background-color: #FCF8E8;
+  height: 100vh;
 }
 
 h1 {
@@ -166,7 +167,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   align-content: space-around;
-  justify-content: space-around
+  justify-content: space-around;
 }
 
 .tips-msg-container {
@@ -178,8 +179,8 @@ a:hover {
 // ANIMATION
 
 .welcome-page-container {
-  height: 100vh;
-  width: 100vw;
+  // height: 100vh;
+  // width: 100vw;
 }
 
 .animated-title {
@@ -190,7 +191,25 @@ a:hover {
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
   font-size: 6em;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;;
 
+  .one {
+    display: flex;
+  }
+
+  .three {
+    display: flex;
+  }
+
+  .get-started {
+    margin-top: 20px;
+    animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+  }
 }
 
 .animated-content {
@@ -267,9 +286,9 @@ span:nth-child(13) {
   animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-span:nth-child(14) {
-  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
+// span:nth-child(14) {
+//   animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+// }
 
 @keyframes fade-in {
   100% {
