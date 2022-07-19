@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
 
+
+// GENERAL
 html, 
 body {
   font-family: 'Montserrat', sans-serif;
-  padding-top: 40px;
+  padding-top: 30px;
   padding-bottom: 40px;
   background-color: #FCF8E8;
   background-image: url('/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 
+  height: 100vh;
 }
 
 h1 {
@@ -26,6 +29,8 @@ a:hover {
   font-weight: bold;
 }
 
+// TOP NAV BAR
+
 .navbar {
   display: flex;
   align-items: center;
@@ -34,26 +39,34 @@ a:hover {
   top: 0;
   width: 100%;
   justify-content: space-between;
+  z-index: 100;
 
   a {
     margin-left: 20px;
     color: white
   }
+
+  .login-button {
+    margin-right: 20px;
+  }
 }
+
+// CHALLENGES
 
 .challenges-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   justify-content: space-evenly;
-
 }
+
+// CARDS
 
 .challenge-card, .my-challenge-card, .tip-card{
   width: 250px;
   height: 350px;
   padding: 10px;
-  border: 2px solid green;
+  border: 2px solid #CC704B;
   border-radius: 25px;
   margin: 5px;
   display: flex;  
@@ -80,6 +93,8 @@ a:hover {
 }
 
 
+// BOTTOM BAR
+
 .points-section {
   display: flex;
   background-color: #4E944F;
@@ -102,6 +117,8 @@ a:hover {
     margin-left: 20px;
   }
 }
+
+// POPUPS
 
 .overlay {
   position: fixed;
@@ -130,50 +147,29 @@ a:hover {
   align-items: center;
   align-content: space-around;
   box-shadow: 10px 10px 8px #888888;
-  border: 2px solid #4E944F ;
+  border: 2px solid #CC704B ;
   border-radius: 25px;
   opacity: 1;
   
 }
 
-// .banaa-content {
-//   background-color: #CED89E;
-//   margin: 15% auto; /* 15% from the top and centered */
-//   padding: 20px;
-//   border: 1px solid #888;
-//   width: 80%; /* Could be more or less, depending on screen size */
-//   position: absolute;
-//   z-index: 1;
-// }
-
-.welcome-container {
-  display: grid;
-  justify-content: center;
-  margin: auto;
-  width: 60%;
-  border: 5px solid #4E944F;
-  padding: 10px;
+.popup-icons {
+  width: 10%;
 }
 
-.black-text-please {
-  border: 4px solid #000000;
-}
-
-.welcome-image{
-align-content: center;
-margin: auto;
-mix-blend-mode: multiply;
-}
+// PROGRESS BAR
 
 .progress-bar-msg {
   margin-left: 20px;
 }
 
+// TIPS & TRICKS
+
 .tips-container {
   display: flex;
   flex-wrap: wrap;
   align-content: space-around;
-  justify-content: space-around
+  justify-content: space-around;
 }
 
 .tips-msg-container {
@@ -183,13 +179,43 @@ mix-blend-mode: multiply;
 }
 
 // ANIMATION
+
 .animated-title {
   font-family: "Montserrat";
   max-width: 40ch;
   text-align: center;
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-  font-size: 90px;
+  font-size: 6em;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 80%;
+    animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+  }
+
+  .one {
+    display: flex;
+  }
+
+  .three {
+    display: flex;
+  }
+
+  .get-started {
+    margin-top: 20px;
+    animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+  }
 }
 
 .animated-content {
@@ -198,7 +224,7 @@ mix-blend-mode: multiply;
   text-align: center;
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-  font-size: 50px;
+  font-size: 0.5em;
 }
 
 @keyframes scale {
@@ -266,17 +292,9 @@ span:nth-child(13) {
   animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-span:nth-child(14) {
-  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
 @keyframes fade-in {
   100% {
     opacity: 1;
     filter: blur(0);
   }
-}
-
-.animated-content {
-  font-size: 50px;
 }

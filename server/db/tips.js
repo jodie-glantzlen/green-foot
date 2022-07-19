@@ -10,14 +10,14 @@ const tips = [
     id: 2,
     name: 'GoodFor',
     logo: '/goodfor-logo.png',
-    description: 'Evolving Towards sustainability, another wholefoods refillery shop.',
+    description: '"Evolving Towards Sustainability": another wholefoods refillery shop.',
     url: 'https://goodfor.co.nz/',
   },
   {
     id: 3,
     name: "Sea Shepherd",
     logo: '/seashepherd.png',
-    description: 'An international non-profit marine conservation organisation, They organise beach clean up days that you can volunteer for.',
+    description: 'An international non-profit marine conservation organisation which organises beach clean up days that you can volunteer for.',
     url: 'https://www.seashepherd.org.nz/',
   },
   {
@@ -52,7 +52,7 @@ const tips = [
     id: 8,
     name: 'Intentionally Sustainable',
     logo: '/intentionally.png',
-    description: 'Offers reusable and plastic free items mainly aimedd to save the ocean and marine life.',
+    description: 'Offers reusable and plastic free items mainly aimed to save the ocean and marine life.',
     url: 'https://intentionally.co.nz/',
   },
   {
@@ -78,7 +78,7 @@ const tips = [
   },
   {
     id: 12,
-    name: '',
+    name: 'Kaicycle',
     logo: '/kaicycle.png',
     description: 'A place that offers urban farming and Community-scale composting.',
     url: 'https://kaicycle.org.nz/',

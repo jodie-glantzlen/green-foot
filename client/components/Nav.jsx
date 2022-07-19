@@ -13,9 +13,9 @@ function Nav() {
         <Link to="/">Welcome</Link>
         <Link to="/home">Home</Link>
         {isAuthenticated && <Link to="/mychallenges">My Challenges</Link>}
-        <Link to="/tips">Tips & Tricks!</Link>
+        <Link to="/tips">Tips & Tricks</Link>
       </div>
-      <div className="LoginButton">
+      <div className="login-button">
         <AuthenticationButton />
       </div>
     </nav>
