@@ -11,15 +11,15 @@ body {
 h1 {
   font-weight: bold;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 a {
-  color: white;
+  color: black;
 }
 
 a:hover {
   font-weight: bold;
-  color: white;
 }
 
 .navbar {
@@ -36,7 +36,7 @@ a:hover {
   }
 }
 
-.challenge_container {
+.challenges-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
@@ -56,7 +56,9 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   align-content: space-around;
-  background-color: #F7EDDB;  
+  background-color: #F7EDDB;
+  box-shadow: 10px 10px 8px #888888;
+
   .title {
     font-size: 14px;
   }
@@ -108,32 +110,37 @@ a:hover {
   z-index: 100;
 }
 
-.banaa{
+.banaa {
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 30%;
   top: 250px;
-  width: 50%; /* Full width */
-  height: 50%; /* Full height */
+  width: 30%; /* Full width */
+  height: 30%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: #ADCF9F;
+  background-color: #F7EDDB;;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  align-content: space-around;
   box-shadow: 10px 10px 8px #888888;
-  border: 10px solid #4E944F ;
+  border: 2px solid #4E944F ;
   border-radius: 25px;
   opacity: 1;
+  
 }
 
-.banaa-content {
-  background-color: #CED89E;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-  position: absolute;
-  z-index: 1;
-}
+// .banaa-content {
+//   background-color: #CED89E;
+//   margin: 15% auto; /* 15% from the top and centered */
+//   padding: 20px;
+//   border: 1px solid #888;
+//   width: 80%; /* Could be more or less, depending on screen size */
+//   position: absolute;
+//   z-index: 1;
+// }
+
 .welcome-container {
   display: grid;
   justify-content: center;
@@ -142,13 +149,11 @@ a:hover {
   border: 5px solid #4E944F;
   padding: 10px;
 }
+
 .black-text-please {
-  color: black;
   border: 4px solid #000000;
 }
-h1 {
-  text-align: center;
-}
+
 .welcome-image{
 align-content: center;
 margin: auto;
@@ -166,6 +171,8 @@ mix-blend-mode: multiply;
   justify-content: space-around
 }
 
-.tips-container a {
-  color: #000000;
+.tips-msg-container {
+  margin-top: 50px;
+  margin-left: 20px;
+  text-align: center;
 }

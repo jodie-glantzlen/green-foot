@@ -48,7 +48,7 @@ function Home () {
   return (
     <>
       <h1 className="is-title has-text-centered">Challenges unlocked</h1>
-      <div className='challenge_container'>
+      <div className='challenges-container'>
         {challenges.map(challenge => <ChallengeCard data={challenge} key={challenge.id} />)}
       </div>
     </>
