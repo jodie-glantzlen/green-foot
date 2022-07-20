@@ -14,7 +14,7 @@ const [bearFlag, setBearFlag] = useState(false)
   return (
     <>
       <Nav />
-
+<div className='home-overlay'>
       <Routes>
         <Route path='/home' element={<Home />} />
         <Route 
@@ -27,6 +27,7 @@ const [bearFlag, setBearFlag] = useState(false)
         <Route path='/' element={<Welcome />} />
         <Route path='/tips' element={<TipsTricks />} />
       </Routes>
+      </div>
     </>
   )
 }
