@@ -314,7 +314,7 @@ span:nth-child(14) {
 }
 
 #bwelc{
-  margin-top: 20px;
+  margin-top: 5px;
   animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
   display: inline-block;
   opacity: 0;
@@ -331,6 +331,10 @@ span:nth-child(14) {
   border-radius: 15px;
   box-shadow: 0 9px #999;
   font-family: "Fredoka", cursive;
+}
+
+.bwelc-link {
+  padding: 0;
 }
 
 #bwelc:hover {background-color: #3e8e41}

@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+const handleClick = () => {
+  window.location.href = '/home'
+}
+
 
 export const Welcome = () => {
   return (
@@ -21,10 +25,9 @@ export const Welcome = () => {
           <span className="animated-content">the</span>
           <span className="animated-content">planet</span>
         </div>
-        <Link to="/home">
-          <button className="get-started" id="bwelc">Get Started</button>
-          </Link>
+          <button id="bwelc" onClick={handleClick}>
+            Get Started
+          </button>
       </div>
-
   );
 };
