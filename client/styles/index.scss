@@ -26,6 +26,8 @@ a:hover {
   font-weight: bold;
 }
 
+// TOP NAVBAR
+
 .navbar {
   display: flex;
   align-items: center;
@@ -45,6 +47,8 @@ a:hover {
   }
 }
 
+// CHALLENGES
+
 .challenges-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -52,6 +56,8 @@ a:hover {
   justify-content: space-evenly;
 
 }
+
+// CARDS
 
 .challenge-card, .my-challenge-card, .tip-card{
   width: 250px;
@@ -66,7 +72,7 @@ a:hover {
   justify-content: space-between;
   align-content: space-around;
   background-color: #F7EDDB;
-  box-shadow: 10px 10px 8px #888888;
+  box-shadow: 5px 10px 18px #888888;
 
   .title {
     font-size: 14px;
@@ -109,6 +115,7 @@ a:hover {
 }
 
 // POPUPS
+
 .overlay {
   position: fixed;
   padding: 0;
@@ -161,6 +168,7 @@ a:hover {
 }
 
 // WELCOME-PAGE
+
 .animated-title {
   font-family: "Montserrat";
   max-width: 40ch;
@@ -205,7 +213,7 @@ a:hover {
   text-align: center;
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-  font-size: 50px;
+  font-size: 0.5em;
 }
 
 @keyframes scale {
@@ -309,8 +317,4 @@ span:nth-child(14) {
   background-color: #4E944F;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
-}
-
-.animated-content {
-  font-size: 50px;
 }
