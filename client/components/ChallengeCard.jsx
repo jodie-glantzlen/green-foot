@@ -6,7 +6,7 @@ import { postMyChallenge } from '../apis/myChallenges'
 function ChallengeCard({ data }) {
   const [none, setDisplay] = useState(false)
   const [modal, setModal] = useState(false)
-  const [accepted, setAccepted] = useState()
+  const [accepted, setAccepted] = useState(false)
 
   const handleClick = (evt) => {
     evt.preventDefault()
