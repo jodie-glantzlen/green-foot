@@ -25,7 +25,9 @@ export const Welcome = () => {
           <span className="animated-content">the</span>
           <span className="animated-content">planet</span>
         </div>
-          <button className="get-started">Get Started</button>
+        <Link to="/home">
+          <button lassName="get-started" id="bwelc">Get Started</button>
+          </Link>
       </div>
     // </div>
   );
