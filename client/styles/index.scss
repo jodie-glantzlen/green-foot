@@ -12,7 +12,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 
-  height: 100vh;
+  // height: 100vh;
 }
 
 h1 {
@@ -134,17 +134,17 @@ a:hover {
 }
 
 
-.home-overlay {
-  position: fixed;
-  padding: 0;
-  margin: 0;
-  top: 52px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.4);
-  z-index: 100;
-}
+// .home-overlay {
+//   position: fixed;
+//   padding: 0;
+//   margin: 0;
+//   top: 52px;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(255, 255, 255, 0.4);
+//   z-index: 100;
+// }
 
 .banaa {
   position: fixed; /* Stay in place */
@@ -229,8 +229,41 @@ a:hover {
     display: inline-block;
     opacity: 0;
     filter: blur(4px);
+   
+    
   }
 }
+
+#bwelc{
+  margin-top: 20px;
+  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4E944F;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+#bwelc:hover {background-color: #3e8e41}
+
+#bwelc:active {
+  background-color: #4E944F;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+
 
 .animated-content {
   font-family: "Montserrat";
