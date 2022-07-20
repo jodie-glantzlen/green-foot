@@ -10,7 +10,6 @@ function ChallengeCard({ data }) {
 
   const handleClick = (evt) => {
     evt.preventDefault()
-    // console.log(data.id)
     postMyChallenge({ challenge_id: data.id })
     setAccepted(true)
   }

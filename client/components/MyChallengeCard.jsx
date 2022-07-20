@@ -14,7 +14,6 @@ function MyChallengeCard({ data, refresh }) {
 
   const Completed = (evt) => {
     evt.preventDefault()
-    // console.log(data.id)
     patchMyChallenge({ id: data.myChallengeId, completed: true })
     refresh()
   }

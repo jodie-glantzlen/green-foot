@@ -7,9 +7,6 @@ import RankPopup from './RankPopup'
 import Profile from './Profile'
 import { useAuth0 } from '@auth0/auth0-react';
 
-
-
-
 function MyChallenges({
   setSoyFlag,
   soyFlag,
