@@ -85,7 +85,7 @@ function MyChallenges({
         <ProgressBar 
         completed={percent} 
         maxCompleted={100} 
-        width="98%"
+        width="95%"
         margin="35px"
         bgColor="#CC704B"
          />
