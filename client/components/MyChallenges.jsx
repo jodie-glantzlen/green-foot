@@ -93,9 +93,9 @@ function MyChallenges({
         margin="20px"
         bgColor="#CC704B"
          />
-        <p className='progress-bar-msg'>
+        {/* <p className='progress-bar-msg'>
           {percent}% of the way to become a Polar Bear Protector!
-        </p>
+        </p> */}
       </div>
 
 

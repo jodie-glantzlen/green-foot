@@ -10,9 +10,12 @@ export const Welcome = () => {
           <span>Welcome</span>
           <span>to</span><br />
         </div>
-        <div className="two">
+        {/* <div className="two">
           <img src="/blended.png" alt="Green Foot logo" />
-        </div>
+        </div> */}
+      <div className="testtest">
+        <img className="test" src="Greenfoot.png" alt="" />
+      </div>
         <div className="three">
           <span className="animated-content">Daily</span>
           <span className="animated-content">challenges</span>
