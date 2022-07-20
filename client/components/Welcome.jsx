@@ -23,7 +23,7 @@ export const Welcome = () => {
           <span className="animated-content">planet</span>
         </div>
         <Link to="/home">
-          <button lassName="get-started" id="bwelc">Get Started</button>
+          <button className="get-started" id="bwelc">Get Started</button>
           </Link>
       </div>
     // </div>

@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import AuthenticationButton from "./authentication-button";
-import Profile from "./Profile"
+import Profile from "./Profile";
 
-import { useAuth0 } from '@auth0/auth0-react';
+import { useAuth0 } from "@auth0/auth0-react";
 
 function Nav() {
   const { isAuthenticated } = useAuth0();
@@ -16,13 +16,16 @@ function Nav() {
         {isAuthenticated && <Link to="/mychallenges">My Challenges</Link>}
         <Link to="/tips">Tips & Tricks</Link>
       </div>
-      <Profile />
       <div className="login-button">
-       
-        <AuthenticationButton />
+        <div>
+          <Profile />
+        </div>
+        <div >
+          <AuthenticationButton />
+        </div>
       </div>
     </nav>
   );
 }
 
-export default Nav
+export default Nav;
