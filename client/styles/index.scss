@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Kanit&display=swap');
 
 //GENERAL 
 html, 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Fredoka", cursive;
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #FCF8E8;
@@ -17,6 +18,7 @@ h1 {
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
+  font-size: 25px;
 }
 
 a {
@@ -85,7 +87,8 @@ a:hover {
   box-shadow: 5px 10px 18px #888888;
 
   .title {
-    font-size: 14px;
+    font-size: 22px;
+    text-align: center;
   }
 
   img {
@@ -182,12 +185,13 @@ a:hover {
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
+  font-size: 25px;
 }
 
 // WELCOME-PAGE
 
 .animated-title {
-  font-family: "Montserrat";
+  font-family: "Fredoka", cursive;
   max-width: 40ch;
   text-align: center;
   transform: scale(0.94);
@@ -225,7 +229,7 @@ a:hover {
 }
 
 .animated-content {
-  font-family: "Montserrat";
+  font-family: "Fredoka", cursive;
   max-width: 40ch;
   text-align: center;
   transform: scale(0.94);
@@ -326,6 +330,7 @@ span:nth-child(14) {
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
+  font-family: "Fredoka", cursive;
 }
 
 #bwelc:hover {background-color: #3e8e41}

@@ -86,12 +86,10 @@ function MyChallenges({
         completed={percent} 
         maxCompleted={100} 
         width="98%"
-        margin="20px"
+        margin="35px"
         bgColor="#CC704B"
          />
       </div>
-
-
       <div className='points-section'>
         <h3>My Score: {currentPoints}</h3>
         <h3>My Rank: {currentRank}</h3>
