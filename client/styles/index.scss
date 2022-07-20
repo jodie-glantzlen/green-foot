@@ -6,6 +6,11 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #FCF8E8;
+  background-image: url('/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  // height: 100vh;
 }
 
 h1 {
@@ -111,6 +116,19 @@ a:hover {
   z-index: 100;
 }
 
+
+// .home-overlay {
+//   position: fixed;
+//   padding: 0;
+//   margin: 0;
+//   top: 52px;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(255, 255, 255, 0.4);
+//   z-index: 100;
+// }
+
 .banaa {
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -185,8 +203,70 @@ mix-blend-mode: multiply;
   text-align: center;
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-  font-size: 90px;
+  font-size: 6em;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 80%;
+    animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+  }
+
+  .one {
+    display: flex;
+  }
+
+  .three {
+    display: flex;
+  }
+
+  .get-started {
+    margin-top: 20px;
+    animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+   
+    
+  }
 }
+
+#bwelc{
+  margin-top: 20px;
+  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4E944F;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+#bwelc:hover {background-color: #3e8e41}
+
+#bwelc:active {
+  background-color: #4E944F;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+
 
 .animated-content {
   font-family: "Montserrat";
