@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
 
+//GENERAL 
 html, 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -9,8 +10,6 @@ body {
   background-image: url('/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-
-  // height: 100vh;
 }
 
 h1 {
@@ -40,6 +39,10 @@ a:hover {
     margin-left: 20px;
     color: white
   }
+
+  .login-button {
+    margin-right: 20px;
+  }
 }
 
 .challenges-container {
@@ -54,7 +57,7 @@ a:hover {
   width: 250px;
   height: 350px;
   padding: 10px;
-  border: 2px solid green;
+  border: 2px solid #CC704B;
   border-radius: 25px;
   margin: 5px;
   display: flex;  
@@ -80,6 +83,7 @@ a:hover {
   }
 }
 
+// BOTTOM BAR
 
 .points-section {
   display: flex;
@@ -104,6 +108,7 @@ a:hover {
   }
 }
 
+// POPUPS
 .overlay {
   position: fixed;
   padding: 0;
@@ -115,19 +120,6 @@ a:hover {
   background: rgba(255, 255, 255, 0.7);
   z-index: 100;
 }
-
-
-// .home-overlay {
-//   position: fixed;
-//   padding: 0;
-//   margin: 0;
-//   top: 52px;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background: rgba(255, 255, 255, 0.4);
-//   z-index: 100;
-// }
 
 .banaa {
   position: fixed; /* Stay in place */
@@ -147,41 +139,13 @@ a:hover {
   border: 2px solid #4E944F ;
   border-radius: 25px;
   opacity: 1;
-  
 }
 
-// .banaa-content {
-//   background-color: #CED89E;
-//   margin: 15% auto; /* 15% from the top and centered */
-//   padding: 20px;
-//   border: 1px solid #888;
-//   width: 80%; /* Could be more or less, depending on screen size */
-//   position: absolute;
-//   z-index: 1;
-// }
-
-.welcome-container {
-  display: grid;
-  justify-content: center;
-  margin: auto;
-  width: 60%;
-  border: 5px solid #4E944F;
-  padding: 10px;
+.popup-icons {
+  width: 10%;
 }
 
-.black-text-please {
-  border: 4px solid #000000;
-}
-
-.welcome-image{
-align-content: center;
-margin: auto;
-mix-blend-mode: multiply;
-}
-
-.progress-bar-msg {
-  margin-left: 20px;
-}
+// TIPS & TRICKS
 
 .tips-container {
   display: flex;
@@ -196,7 +160,7 @@ mix-blend-mode: multiply;
   text-align: center;
 }
 
-// ANIMATION
+// WELCOME-PAGE
 .animated-title {
   font-family: "Montserrat";
   max-width: 40ch;
@@ -232,41 +196,8 @@ mix-blend-mode: multiply;
     display: inline-block;
     opacity: 0;
     filter: blur(4px);
-   
-    
   }
 }
-
-#bwelc{
-  margin-top: 20px;
-  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  display: inline-block;
-  opacity: 0;
-  filter: blur(4px);
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #4E944F;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
-
-#bwelc:hover {background-color: #3e8e41}
-
-#bwelc:active {
-  background-color: #4E944F;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-
-
-
 
 .animated-content {
   font-family: "Montserrat";
@@ -351,6 +282,33 @@ span:nth-child(14) {
     opacity: 1;
     filter: blur(0);
   }
+}
+
+#bwelc{
+  margin-top: 20px;
+  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4E944F;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+#bwelc:hover {background-color: #3e8e41}
+
+#bwelc:active {
+  background-color: #4E944F;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .animated-content {
