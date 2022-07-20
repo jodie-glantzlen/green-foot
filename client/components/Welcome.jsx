@@ -4,14 +4,13 @@ import { Link } from "react-router-dom";
 
 export const Welcome = () => {
   return (
-    // <div className="welcome-page-container">
       <div className="animated-title">
         <div className="one">
           <span>Welcome</span>
           <span>to</span><br />
         </div>
         <div className="two">
-          <img src="/blended.png" alt="Green Foot logo" />
+          <img src="/transparent-green-foot.png" alt="Green Foot logo" />
         </div>
         <div className="three">
           <span className="animated-content">Daily</span>
@@ -26,6 +25,5 @@ export const Welcome = () => {
           <button lassName="get-started" id="bwelc">Get Started</button>
           </Link>
       </div>
-    // </div>
   );
 };
