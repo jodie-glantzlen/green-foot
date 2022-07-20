@@ -26,8 +26,6 @@ a:hover {
   font-weight: bold;
 }
 
-// TOP NAV BAR
-
 .navbar {
   display: flex;
   align-items: center;
@@ -43,22 +41,19 @@ a:hover {
   }
 }
 
-// CHALLENGES
-
 .challenges-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   justify-content: space-evenly;
-}
 
-// CARDS
+}
 
 .challenge-card, .my-challenge-card, .tip-card{
   width: 250px;
   height: 350px;
   padding: 10px;
-  border: 2px solid #CC704B;
+  border: 2px solid green;
   border-radius: 25px;
   margin: 5px;
   display: flex;  
@@ -137,10 +132,9 @@ a:hover {
   align-items: center;
   align-content: space-around;
   box-shadow: 10px 10px 8px #888888;
-  border: 2px solid #CC704B ;
+  border: 2px solid #4E944F ;
   border-radius: 25px;
   opacity: 1;
-  
 }
 
 .popup-icons {
@@ -273,6 +267,10 @@ span:nth-child(12) {
 
 span:nth-child(13) {
   animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(14) {
+  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 @keyframes fade-in {
