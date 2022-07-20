@@ -7,7 +7,7 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #FCF8E8;
-  background-image: url('/background.jpg');
+  background-image: url('/bestbg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -44,6 +44,14 @@ a:hover {
 
   .login-button {
     margin-right: 20px;
+    display: flex;
+    text-align: center;
+  }
+  .login-button h2{
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+
   }
 }
 
@@ -164,7 +172,9 @@ a:hover {
 .tips-msg-container {
   margin-top: 50px;
   margin-left: 20px;
+  margin-bottom: 20px;
   text-align: center;
+  font-weight: bold;
 }
 
 // WELCOME-PAGE

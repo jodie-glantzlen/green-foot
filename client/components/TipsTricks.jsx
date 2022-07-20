@@ -6,7 +6,7 @@ function TipsTricks() {
 
   return (
     <>
-      <h1>Not sure where to start?</h1>
+    <h2 className="tips-msg-container "> These people are a great source of inspiration  </h2>
       <div className="tips-container">
       {tips.map(tip => <TipCard data={tip} key={tip.id}/>)}
       </div>
