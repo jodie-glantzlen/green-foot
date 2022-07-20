@@ -77,7 +77,6 @@ function MyChallenges({
 
   return (
     <>
-    <Profile/>
       <h1 className='has-text-centered'>My Challenges </h1>
       <div className='challenges-container'>
         {myChallengesArr.map(challenge => <MyChallengeCard data={challenge} key={challenge.id} refresh={refreshMyChallenges} />)}
