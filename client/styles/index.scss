@@ -36,6 +36,7 @@ a:hover {
   top: 0;
   width: 100%;
   justify-content: space-between;
+  z-index: 1;
 
   a {
     margin-left: 20px;
@@ -47,11 +48,11 @@ a:hover {
     display: flex;
     text-align: center;
   }
-  .login-button h2{
-    color: #fff;
-    font-size: 20px;
-    text-align: center;
 
+  .profile {
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
   }
 }
 
@@ -170,8 +171,6 @@ a:hover {
 }
 
 .tips-msg-container {
-  margin-top: 50px;
-  margin-left: 20px;
   margin-bottom: 20px;
   text-align: center;
   font-weight: bold;
@@ -328,3 +327,4 @@ span:nth-child(14) {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
