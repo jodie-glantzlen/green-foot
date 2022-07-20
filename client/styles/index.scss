@@ -10,6 +10,7 @@ body {
   background-image: url('/bestbg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  color: #1B1A17;
 }
 
 h1 {
@@ -172,8 +173,15 @@ a:hover {
 
 .tips-msg-container {
   margin-bottom: 20px;
+  margin-top: 40px;
   text-align: center;
   font-weight: bold;
+}
+
+.tips-title {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 // WELCOME-PAGE

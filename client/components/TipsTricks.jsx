@@ -6,9 +6,11 @@ function TipsTricks() {
 
   return (
     <>
-    <h2 className="tips-msg-container "> These people are a great source of inspiration  </h2>
+      <h2 className="tips-title">
+        If you need help completing your challenges, here are some great sources of inspiration.
+      </h2>
       <div className="tips-container">
-      {tips.map(tip => <TipCard data={tip} key={tip.id}/>)}
+        {tips.map(tip => <TipCard data={tip} key={tip.id} />)}
       </div>
     </>
   )
