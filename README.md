@@ -1,60 +1,36 @@
 # Green Foot
 
-## Getting Started
+Hi there, welcome to Green Foot, a one-week project we built as part of graduating Dev Academy Aotearoa.
+Green Foot is a game that helps you take small steps to protect the planet through fun, daily challenges.
 
-### From the Github UI
-See the instructions [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) to use Github's feature to create a new repo from a template.
-
-### From the command line
+Let's go!
 
 ```
-git clone https://github.com/dev-academy-challenges/boilerplate-fullstack [your-project-name]
-cd [your-project-name]
-npm install # to install dependencies
-npm run dev # to start the dev server
+npm install
+npm run knex migrate:latest
+npm run knex seed:run
+npm start
 ```
 
-You can find the server running on [http://localhost:3000](http://localhost:3000).
+# Pre-development planning and reflections
 
-## Details
-
-This repo includes:
-
-* a single, simple API endpoint (`/api/v1/fruits`)
-* a single React component (`<App />`)
-* an example database module (`server/db/fruits.js`)
-* an API client module (`client/apis/fruits.js`)
-* configuration for Jest and testing library
-* configuration for server-side debugging in VS Code
-* a single client-side test (`client/components/App.test.js`)
-
-
-# MVP
+## MVP
 
 * Create a Database  - Holds all the challenges that a user can choose from.
-
 * All challenges will be displayed on a Home page.
-
 * As a user I want to select a challenge from Home and add it to ‘My Challenges’ page.
-
 * As a user I want to “DELETE’ a challenge from ‘My Challenges’ page.
-
 * As a user I want to “Complete” a challenge this will add into the points system
-
 * As a user I want to see my total Points and current Rank displayed on “My Challenges” page
-
 * Styling and the look of this app is important to add to the Gamified feeling.
-
 * Deployment of the app to Heroku
-
-
 
 ## Stretch
 * Having a progress page to show distance to the next rank.
-* Graph page to show history and progress.
+* Graph page to show history and progress?
 * Ways to gamify it more - more illustrations and levels.
 * Authentication - using Auth0
 
-# Wireframes
+## Wireframes
 
 <img width="867" alt="Screen Shot 2022-07-14 at 11 11 59 AM" src="https://user-images.githubusercontent.com/103092915/178852439-d95db84f-a5f2-4cc2-a034-0dc3d1efa6b6.png">
