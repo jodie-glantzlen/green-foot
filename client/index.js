@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <Auth0Provider
           domain="green-foot.au.auth0.com"
           clientId="ZlH4SB0E0mtbIIPNcoq6m6twiieiqHed"
-          redirectUri="green-foot.herokuapp.com"
+          redirectUri={window.location.origin}
           audience="https://green-foot.au.auth0.com/api/v2/"
           scope="read:current_user update:current_user_metadata"
         >
