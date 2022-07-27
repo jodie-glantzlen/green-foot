@@ -2,15 +2,21 @@ import React, { useState } from 'react'
 import Modal from './Modal'
 
 import { postMyChallenge } from '../apis/myChallenges'
+import { useAuth0 } from '@auth0/auth0-react'
 
 function ChallengeCard ({ data }) {
   const [none, setDisplay] = useState(false)
   const [modal, setModal] = useState(false)
   const [accepted, setAccepted] = useState(false)
 
+  const { user } = useAuth0()
+
   const handleClick = (evt) => {
     evt.preventDefault()
-    postMyChallenge({ challenge_id: data.id })
+    postMyChallenge({
+      user_email: user.email,
+      challenge_id: data.id
+    })
     setAccepted(true)
   }
 
