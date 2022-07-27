@@ -5,11 +5,13 @@ Green Foot is a game that helps you take small steps to protect the planet throu
 
 Let's go!
 
+Note: Runs with node 16.15.0
+
 ```
 npm install
 npm run knex migrate:latest
 npm run knex seed:run
-npm start
+npm run dev
 ```
 
 # Pre-development planning and reflections
@@ -34,3 +36,16 @@ npm start
 ## Wireframes
 
 <img width="867" alt="Screen Shot 2022-07-14 at 11 11 59 AM" src="https://user-images.githubusercontent.com/103092915/178852439-d95db84f-a5f2-4cc2-a034-0dc3d1efa6b6.png">
+
+# Post-graduation reflections
+
+## Work in progress / Easy things that can be done quickly
+To be fixed: 
+* currently the user can select the same challenge multiple times, causing the logic to crash
+* weird behaviour on refresh
+
+To improve:
+* rebuild the UI/UX, too many clicks atm!
+
+## Big changes
+* Rebuild from scratch to implement Redux
