@@ -1,7 +1,8 @@
 const connection = require('./connection')
 
-function selectMyChallenges (db = connection) {
+function selectMyChallenges (email, db = connection) {
   return db('my_challenges')
+    .where({ user_email: email })
     .select('*', 'my_challenges.id AS myChallengeId')
     .join('challenges', 'my_challenges.challenge_id', 'challenges.id')
 }

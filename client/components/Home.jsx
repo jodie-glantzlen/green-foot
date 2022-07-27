@@ -6,7 +6,7 @@ import ChallengeCard from './ChallengeCard'
 import { useAuth0 } from '@auth0/auth0-react'
 
 function Home () {
-  const { isAuthenticated } = useAuth0()
+  const { isAuthenticated, user } = useAuth0()
   const [challenges, setChallenges] = useState([])
   const [myChallengesArr, setMyChallengesArr] = useState([])
   const [currentPointsState, setCurrentPointsState] = useState()
@@ -34,7 +34,7 @@ function Home () {
   }
 
   const refreshMyChallenges = () => {
-    fetchAllMyChallenges()
+    fetchAllMyChallenges(user.email)
       .then((results) => {
         setMyChallengesArr(results)
         setCurrentPointsState(results.reduce((total, challenge) => {

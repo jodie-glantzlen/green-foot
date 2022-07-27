@@ -17,14 +17,14 @@ function MyChallenges ({
   const [currentRank, setcurrentRank] = useState('')
   const [showRank, setShowRank] = useState(false)
   const [myChallengesArr, setMyChallengesArr] = useState([])
-  const { isAuthenticated } = useAuth0()
+  const { isAuthenticated, user } = useAuth0()
   
   useEffect(() => {
     refreshMyChallenges()
   }, [])
 
   const refreshMyChallenges = () => {
-    fetchAllMyChallenges()
+    fetchAllMyChallenges(user.email)
       .then((results) => {
         setMyChallengesArr(results)
       })
