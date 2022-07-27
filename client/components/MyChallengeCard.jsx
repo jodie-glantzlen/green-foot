@@ -1,12 +1,11 @@
-import React from "react";
+import React from 'react'
 
 import {
   deleteMyChallenge,
-  patchMyChallenge,
-  postMyChallenge,
-} from "../apis/myChallenges"
+  patchMyChallenge
+} from '../apis/myChallenges'
 
-function MyChallengeCard({ data, refresh }) {
+function MyChallengeCard ({ data, refresh }) {
   const handleDelete = () => {
     deleteMyChallenge(data.myChallengeId)
     refresh()

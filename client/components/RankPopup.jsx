@@ -1,28 +1,27 @@
-import React from "react";
+import React from 'react'
 
-function RankPopup ({viewRankPopup, rank}) {
-
+function RankPopup ({ viewRankPopup, rank }) {
   return (
     <div className="overlay">
-      <div className="banaa">
-          <p className="title is-4">
+      <div className="modal-container">
+        <p className="title is-4">
             New Rank: {rank}
-          </p>
+        </p>
         <div className="popup-icons">
-          {rank === "Tofu Torchbearer" && (
+          {rank === 'Tofu Torchbearer' && (
             <img src="/torch.png" alt="Cute torch icon" />
           )}
-          {rank === "Soy Samurai" && (
+          {rank === 'Soy Samurai' && (
             <img src="/katana.png" alt="Cute katana icon" />
           )}
-          {rank === "Kale King" && (
+          {rank === 'Kale King' && (
             <img src="/crown.png" alt="Cute crown icon" />
           )}
-          {rank === "Polar Bear Protector" && (
+          {rank === 'Polar Bear Protector' && (
             <img src="/polar-bear.png" alt="Cute polar bear icon" />
           )}
         </div>
-          {rank !== 'Polar Bear Protector' &&
+        {rank !== 'Polar Bear Protector' &&
             <div>
               <p>
                 Well done! You just unlocked new challenges!
@@ -31,8 +30,8 @@ function RankPopup ({viewRankPopup, rank}) {
               <br />
               <button className="button is-small is-rounded" onClick={evt => viewRankPopup(evt)}>Got it!</button>
             </div>
-          }
-          {rank == 'Polar Bear Protector' &&
+        }
+        {rank === 'Polar Bear Protector' &&
             <div>
               <p>Awesome, you completed all the challenges!</p>
               <p>Thanks for helping the planet 🌏</p>
@@ -41,7 +40,7 @@ function RankPopup ({viewRankPopup, rank}) {
                 Close
               </button>
             </div>
-          }
+        }
       </div>
     </div>
   )

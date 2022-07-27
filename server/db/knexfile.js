@@ -19,7 +19,7 @@ module.exports = {
 
   production: {
     client: 'postgresql',
-    connection: { 
+    connection: {
       connectionString: process.env.DATABASE_URL,
       ssl: { rejectUnauthorized: false }
     },
@@ -31,5 +31,4 @@ module.exports = {
       tableName: 'knex_migrations'
     }
   }
-  }
-
+}

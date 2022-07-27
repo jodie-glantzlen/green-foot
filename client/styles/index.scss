@@ -141,7 +141,7 @@ a:hover {
   z-index: 100;
 }
 
-.banaa {
+.modal-container {
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 30%;
@@ -313,7 +313,14 @@ span:nth-child(14) {
   }
 }
 
-#bwelc{
+.button-row {
+  width: 25vw;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+
+.welcome-button {
   margin-top: 5px;
   animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
   display: inline-block;
@@ -333,13 +340,9 @@ span:nth-child(14) {
   font-family: "Fredoka", cursive;
 }
 
-.bwelc-link {
-  padding: 0;
-}
+.welcome-button:hover {background-color: #3e8e41}
 
-#bwelc:hover {background-color: #3e8e41}
-
-#bwelc:active {
+.welcome-button:active {
   background-color: #4E944F;
   box-shadow: 0 5px #666;
   transform: translateY(4px);

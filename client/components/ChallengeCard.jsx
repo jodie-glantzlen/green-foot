@@ -3,7 +3,7 @@ import Modal from './Modal'
 
 import { postMyChallenge } from '../apis/myChallenges'
 
-function ChallengeCard({ data }) {
+function ChallengeCard ({ data }) {
   const [none, setDisplay] = useState(false)
   const [modal, setModal] = useState(false)
   const [accepted, setAccepted] = useState(false)

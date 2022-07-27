@@ -5,5 +5,5 @@ function selectAllChallenges (db = connection) {
 }
 
 module.exports = {
-selectAllChallenges
+  selectAllChallenges
 }

@@ -1,8 +1,6 @@
-import React from "react"
-
+import React from 'react'
 
 function TipCard ({ data }) {
-
   return (
     <div className="tip-card">
       <h2 className="title">{data.name}</h2>

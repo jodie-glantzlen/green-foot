@@ -1,12 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import AuthenticationButton from "./authentication-button";
-import Profile from "./Profile";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import AuthenticationButton from './AuthenticationButton'
+import Profile from './Profile'
 
-import { useAuth0 } from "@auth0/auth0-react";
+import { useAuth0 } from '@auth0/auth0-react'
 
-function Nav() {
-  const { isAuthenticated } = useAuth0();
+function Nav () {
+  const { isAuthenticated } = useAuth0()
 
   return (
     <nav className="navbar">
@@ -25,7 +25,7 @@ function Nav() {
         </div>
       </div>
     </nav>
-  );
+  )
 }
 
-export default Nav;
+export default Nav

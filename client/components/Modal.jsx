@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react'
 import { viewModal } from './ChallengeCard'
 
-function Modal({ data, viewModal, handleClick }) {
+function Modal ({ data, viewModal, handleClick }) {
   return (
     <div className="overlay">
-      <div className="banaa">
+      <div className="modal-container">
         <p className="title">{data.title}</p>
         <p>{data.description}</p>
         <br />
@@ -18,7 +18,6 @@ function Modal({ data, viewModal, handleClick }) {
         </button>
       </div>
     </div>
-
   )
 }
 

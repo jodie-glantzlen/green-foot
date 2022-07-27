@@ -1,9 +1,8 @@
-import React from "react"
-import tips from "../../server/db/tips"
-import TipCard from "./TipCard"
+import React from 'react'
+import tips from '../../server/db/tips'
+import TipCard from './TipCard'
 
-function TipsTricks() {
-
+function TipsTricks () {
   return (
     <>
       <h2 className="tips-title">

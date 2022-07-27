@@ -3,12 +3,10 @@ import React, { useState, useEffect } from 'react'
 import { fetchAllChallenges } from '../apis/challenges'
 import { fetchAllMyChallenges } from '../apis/myChallenges'
 import ChallengeCard from './ChallengeCard'
-import Profile from './Profile'
-import { useAuth0 } from '@auth0/auth0-react';
-
+import { useAuth0 } from '@auth0/auth0-react'
 
 function Home () {
-  const { isAuthenticated } = useAuth0();
+  const { isAuthenticated } = useAuth0()
   const [challenges, setChallenges] = useState([])
   const [myChallengesArr, setMyChallengesArr] = useState([])
   const [currentPointsState, setCurrentPointsState] = useState()
@@ -51,7 +49,7 @@ function Home () {
 
   return (
     <>
-          <h1 className="is-title has-text-centered">Challenges unlocked</h1>
+      <h1 className="is-title has-text-centered">Challenges unlocked</h1>
       { isAuthenticated && <div className='challenges-container'>
         {challenges.map(challenge => <ChallengeCard data={challenge} key={challenge.id} />)}
       </div> }
