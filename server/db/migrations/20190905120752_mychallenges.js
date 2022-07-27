@@ -3,7 +3,6 @@ exports.up = function (knex) {
     table.increments('id')
     table.integer('challenge_id')
     table.boolean('completed').defaultsTo(false)
-
   })
 }
 
