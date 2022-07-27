@@ -12,7 +12,7 @@ function Nav () {
     <nav className="navbar">
       <div className="navbar-items">
         <Link to="/">Welcome</Link>
-        <Link to="/home">Home</Link>
+        {isAuthenticated && <Link to="/home">Home</Link>}
         {isAuthenticated && <Link to="/mychallenges">My Challenges</Link>}
         <Link to="/tips">Tips & Tricks</Link>
       </div>

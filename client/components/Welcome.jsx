@@ -1,11 +1,31 @@
 import React from 'react'
 import AuthenticationButton from './AuthenticationButton'
+import SignupButton from './SignupButton'
+import { useAuth0 } from '@auth0/auth0-react'
 
 const handleClick = () => {
   window.location.href = '/home'
 }
 
 export const Welcome = () => {
+  const { isAuthenticated } = useAuth0()
+
+  const getButtons = () => {
+    if (isAuthenticated) {
+      return <button className="welcome-button" onClick={handleClick}>
+        <AuthenticationButton />
+      </button>
+    }
+    return <div className="button-row">
+      <button className="welcome-button" onClick={handleClick}>
+        <SignupButton />
+      </button>
+      <button className="welcome-button" onClick={handleClick}>
+        <AuthenticationButton />
+      </button>
+    </div>
+  }
+
   return (
     <div className="animated-title">
       <div className="one">
@@ -24,14 +44,7 @@ export const Welcome = () => {
         <span className="animated-content">the</span>
         <span className="animated-content">planet</span>
       </div>
-      <div className="button-row">
-        <button className="welcome-button" onClick={handleClick}>
-          Get Started
-        </button>
-        <button className="welcome-button" onClick={handleClick}>
-          <AuthenticationButton />
-        </button>
-      </div>
+      {getButtons()}
     </div>
   )
 }
