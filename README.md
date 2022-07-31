@@ -48,4 +48,4 @@ To improve:
 * rebuild the UI/UX, too many clicks atm!
 
 ## Big changes
-* Rebuild from scratch to implement Redux
+* Implement Redux for a better state management solution
