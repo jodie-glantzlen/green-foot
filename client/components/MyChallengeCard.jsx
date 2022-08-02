@@ -5,13 +5,13 @@ import {
   patchMyChallenge
 } from '../apis/myChallenges'
 
-function MyChallengeCard ({ data, refresh }) {
+function MyChallengeCard({ data, refresh }) {
   const handleDelete = () => {
     deleteMyChallenge(data.myChallengeId)
     refresh()
   }
 
-  const Completed = (evt) => {
+  const setAsCompleted = (evt) => {
     evt.preventDefault()
     patchMyChallenge({ id: data.myChallengeId, completed: true })
     refresh()
@@ -26,11 +26,9 @@ function MyChallengeCard ({ data, refresh }) {
         </button>
         <p>{data.description}</p>
         <div className="complete-or-delete">
-          {!data.completed ? (
-            <button className="button is-small is-rounded" onClick={Completed}>Completed</button>
-          ) : (
-            <button className="button is-small is-rounded">✅</button>
-          )}
+          <button className="button is-small is-rounded" onClick={setAsCompleted}>
+            {data.completed ? '✅' : 'Completed'}
+          </button>
           <button className="button is-small is-rounded" onClick={handleDelete}>Delete</button>
         </div>
       </div>
