@@ -34,7 +34,7 @@ router.delete('/mychallenges/:id', (req, res) => {
 
   db.deleteMyChallenge(id)
     .then(() => {
-      res.json('delete :(')
+      res.json('delete successful')
     })
     .catch((err) => res.status(500).json({ msg: err.message }))
 })

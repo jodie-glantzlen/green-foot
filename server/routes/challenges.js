@@ -12,4 +12,16 @@ router.get('/', (req, res) => {
     .catch(err => console.log(err.message))
 })
 
+router.patch('/', (req, res) => {
+  const id = req.body.id
+  const detailToUpdate = { selected: req.body.selected }
+  console.log('from routes: ', req.body)
+
+  db.updateChallenge(id, detailToUpdate)
+    .then((updatedChallenge) => {
+      res.json(updatedChallenge)
+    })
+    .catch((err) => res.status(500).json({ msg: err.message }))
+})
+
 module.exports = router

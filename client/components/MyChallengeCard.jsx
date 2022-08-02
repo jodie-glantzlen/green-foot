@@ -5,7 +5,7 @@ import {
   patchMyChallenge
 } from '../apis/myChallenges'
 
-function MyChallengeCard({ data, refresh }) {
+function MyChallengeCard ({ data, refresh }) {
   const handleDelete = () => {
     deleteMyChallenge(data.myChallengeId)
     refresh()

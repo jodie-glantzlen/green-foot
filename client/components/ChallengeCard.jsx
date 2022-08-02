@@ -3,12 +3,11 @@ import Modal from './Modal'
 
 import { postMyChallenge } from '../apis/myChallenges'
 import { useAuth0 } from '@auth0/auth0-react'
+import { patchChallenge } from '../apis/challenges'
 
 function ChallengeCard ({ data }) {
   const [none, setDisplay] = useState(false)
   const [modal, setModal] = useState(false)
-  const [accepted, setAccepted] = useState(false)
-
   const { user } = useAuth0()
 
   const handleClick = (evt) => {
@@ -17,7 +16,7 @@ function ChallengeCard ({ data }) {
       user_email: user.email,
       challenge_id: data.id
     })
-    setAccepted(true)
+    patchChallenge({ id: data.id, selected: true })
   }
 
   const viewModal = (evt) => {
@@ -36,7 +35,7 @@ function ChallengeCard ({ data }) {
         <p>Level: {data.level}</p>
         <button className="button is-small is-rounded" onClick={viewModal}>Details</button>
         <button className="button is-small is-rounded" onClick={handleClick}>
-          {accepted ? '✅' : 'Accept'}
+          {data.selected ? '✅' : 'Accept'}
         </button>
         {none && <button className="button is-small is-rounded">{data.points} points</button>}
         {modal && <Modal data={data} viewModal={viewModal} handleClick={handleClick} />}
