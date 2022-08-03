@@ -18,7 +18,7 @@ function MyChallenges ({
   const [showRank, setShowRank] = useState(false)
   const [myChallengesArr, setMyChallengesArr] = useState([])
   const { isAuthenticated, user } = useAuth0()
-  
+
   useEffect(() => {
     refreshMyChallenges()
   }, [])

@@ -5,7 +5,7 @@ import { postMyChallenge } from '../apis/myChallenges'
 import { useAuth0 } from '@auth0/auth0-react'
 import { patchChallenge } from '../apis/challenges'
 
-function ChallengeCard ({ data }) {
+function ChallengeCard ({ data, refresh }) {
   const [modal, setModal] = useState(false)
   const { user } = useAuth0()
 
@@ -16,6 +16,7 @@ function ChallengeCard ({ data }) {
       challenge_id: data.id
     })
     patchChallenge({ id: data.id, selected: true })
+    refresh()
   }
 
   const viewModal = (evt) => {
