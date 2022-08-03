@@ -6,7 +6,6 @@ import { useAuth0 } from '@auth0/auth0-react'
 import { patchChallenge } from '../apis/challenges'
 
 function ChallengeCard ({ data }) {
-  const [none, setDisplay] = useState(false)
   const [modal, setModal] = useState(false)
   const { user } = useAuth0()
 
@@ -30,15 +29,13 @@ function ChallengeCard ({ data }) {
     <>
       <div className="challenge-card">
         <h2 className="title">{data.title}</h2>
-        {none && <p>{data.description}</p>}
         <img src='./Greenfoot.png'></img>
         <p>Level: {data.level}</p>
         <button className="button is-small is-rounded" onClick={viewModal}>Details</button>
         <button className="button is-small is-rounded" onClick={handleClick}>
           {data.selected ? '✅' : 'Accept'}
         </button>
-        {none && <button className="button is-small is-rounded">{data.points} points</button>}
-        {modal && <Modal data={data} viewModal={viewModal} handleClick={handleClick} />}
+        {modal && <Modal data={data} viewModal={viewModal} />}
       </div>
     </>
   )

@@ -18,7 +18,11 @@ router.patch('/', (req, res) => {
   console.log('from routes: ', req.body)
 
   db.updateChallenge(id, detailToUpdate)
+    .then(() => {
+      return db.selectChallengeById(id)
+    })
     .then((updatedChallenge) => {
+      console.log('update func from routes: ', updatedChallenge)
       res.json(updatedChallenge)
     })
     .catch((err) => res.status(500).json({ msg: err.message }))

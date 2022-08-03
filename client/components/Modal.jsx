@@ -1,7 +1,6 @@
 import React from 'react'
-import { viewModal } from './ChallengeCard'
 
-function Modal ({ data, viewModal, handleClick }) {
+function Modal ({ data, viewModal }) {
   return (
     <div className="overlay">
       <div className="modal-container">
