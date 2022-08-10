@@ -3,6 +3,8 @@
 Hi there, welcome to Green Foot, a one-week project we built as part of graduating Dev Academy Aotearoa.
 Green Foot is a game that helps you take small steps to protect the planet through fun, daily challenges.
 
+![screenshot](/.docs/screenshot.png)
+
 Let's go!
 
 Note: Runs with node 16.15.0
