@@ -43,7 +43,7 @@ npm run dev
 
 ## Work in progress / Easy things that can be done quickly
 To be fixed: 
-* currently the user can select the same challenge multiple times, causing the logic to crash
+* currently the user can select the same challenge multiple times
 * weird behaviour on refresh
 
 To improve:
